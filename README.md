@@ -3,7 +3,7 @@ Ludum Dare 47
 
 ## Art TODOs
 
- - Enemies
+ - Enemies: Biene
  - Enemy Attack Animations
  - More interesting scenery, e.g. cliff (have to walk around)
  - Cave decoration
