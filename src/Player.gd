@@ -14,6 +14,7 @@ class PlayerReplay:
 		
 enum Direction {LEFT, RIGHT, UP, DOWN}
 
+var prev_state = {}
 var state = {}
 var is_replay = false
 var time = 0
@@ -23,6 +24,11 @@ var last_direction = Direction.RIGHT
 
 var speed = 150
 var health = 3
+var attack_range = 100
+var damage = 1
+
+func player_marker():
+	pass
 
 func _ready():
 	if is_replay:
@@ -33,6 +39,9 @@ func _ready():
 
 func is_pressed(key):
 	return key in state and state[key]
+
+func just_pressed(key):
+	return key in state and state[key] and not (key in prev_state and prev_state[key])
 
 func process_input_event(ev_str):
 	if !is_replay:
@@ -52,6 +61,15 @@ func hurt(hp):
 		self.modulate.b = 1.0
 	else:
 		get_tree().root.get_child(0).player_hurt()
+	
+	if health <= 0:
+		if is_replay:
+			get_parent().remove_child(self)
+		else:
+			# end this iteration
+			var game = get_tree().root.get_child(0)
+			if game.time < game.limit - 1:
+				game.time = game.limit - 1
 
 
 func handle_input_events():
@@ -59,16 +77,14 @@ func handle_input_events():
 		while !replay_log.inputs.empty() && replay_log.inputs[0][0] < time:
 			process_input_event(replay_log.inputs[0][1])
 			replay_log.inputs.pop_front()
-			
-		if Input.is_action_just_pressed("ui_accept"):
-			self.hurt(1)
 	else:
-		var keys = {"move_up":"up", "move_down":"down", "move_left":"left", "move_right":"right"}
+		var keys = {"move_up":"up", "move_down":"down", "move_left":"left", "move_right":"right", "attack":"attack"}
 		for k in keys:
 			if Input.is_action_just_pressed(k):
 				process_input_event("+"+keys[k])
 			if Input.is_action_just_released(k):
 				process_input_event("-"+keys[k])
+	prev_state = state
 
 func _process(delta):
 	time += delta
@@ -102,4 +118,20 @@ func _process(delta):
 			else:
 				last_direction = Direction.UP
 				$AnimatedSprite.animation = "run_front"
-			
+	
+	match last_direction:
+		Direction.UP:
+			$RayCast2D.cast_to = Vector2(0, -attack_range)
+		Direction.DOWN:
+			$RayCast2D.cast_to = Vector2(0, +attack_range)
+		Direction.LEFT:
+			$RayCast2D.cast_to = Vector2(-attack_range, 0)
+		Direction.RIGHT:
+			$RayCast2D.cast_to = Vector2(+attack_range, 0)
+	
+	
+	if is_pressed("attack"):
+		var collider = $RayCast2D.get_collider()
+		print(collider)
+		if collider && collider is Enemy:
+			collider.hurt(damage)

@@ -98,3 +98,7 @@ drag_margin_v_enabled = true
 drag_margin_left = 0.3
 drag_margin_right = 0.3
 drag_margin_bottom = 0.4
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 50, 0 )

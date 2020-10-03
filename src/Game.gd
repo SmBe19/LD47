@@ -38,9 +38,11 @@ func get_players():
 func player_hurt():
 	self.modulate.g = 0.5
 	self.modulate.b = 0.5
+	VisualServer.set_default_clear_color(Color(1,0.5,0.5))
 	yield(get_tree().create_timer(0.1), "timeout")
 	self.modulate.g = 1.0
 	self.modulate.b = 1.0
+	VisualServer.set_default_clear_color(Color(1,1,1))
 
 func _process(delta):
 	time += delta
