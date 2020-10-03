@@ -7,5 +7,3 @@ Ludum Dare 47
  - Enemy Attack Animations
  - More interesting scenery, e.g. cliff (have to walk around)
  - Cave decoration
- - Time machine
- - Bear sign
