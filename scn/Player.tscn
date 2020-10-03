@@ -1,33 +1,100 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://src/Player.gd" type="Script" id=1]
-[ext_resource path="res://img/fritz/front.png" type="Texture" id=2]
+[ext_resource path="res://img/fritz/run_side0005.png" type="Texture" id=2]
+[ext_resource path="res://img/fritz/run_side0001.png" type="Texture" id=3]
+[ext_resource path="res://img/fritz/run_side0000.png" type="Texture" id=4]
+[ext_resource path="res://img/fritz/run_side0002.png" type="Texture" id=5]
+[ext_resource path="res://img/fritz/run_side0003.png" type="Texture" id=6]
+[ext_resource path="res://img/fritz/run_side0004.png" type="Texture" id=7]
+[ext_resource path="res://img/fritz/run_side0007.png" type="Texture" id=8]
+[ext_resource path="res://img/fritz/run_side0008.png" type="Texture" id=9]
+[ext_resource path="res://img/fritz/run_side0006.png" type="Texture" id=10]
+[ext_resource path="res://img/fritz/idle0005.png" type="Texture" id=11]
+[ext_resource path="res://img/fritz/idle0008.png" type="Texture" id=12]
+[ext_resource path="res://img/fritz/idle0003.png" type="Texture" id=13]
+[ext_resource path="res://img/fritz/idle0006.png" type="Texture" id=14]
+[ext_resource path="res://img/fritz/run_front0001.png" type="Texture" id=15]
+[ext_resource path="res://img/fritz/run_front0004.png" type="Texture" id=16]
+[ext_resource path="res://img/fritz/run_side0009.png" type="Texture" id=17]
+[ext_resource path="res://img/fritz/run_side0011.png" type="Texture" id=18]
+[ext_resource path="res://img/fritz/run_front0002.png" type="Texture" id=19]
+[ext_resource path="res://img/fritz/run_front0005.png" type="Texture" id=20]
+[ext_resource path="res://img/fritz/run_side0010.png" type="Texture" id=21]
+[ext_resource path="res://img/fritz/run_front0000.png" type="Texture" id=22]
+[ext_resource path="res://img/fritz/run_front0003.png" type="Texture" id=23]
+[ext_resource path="res://img/fritz/idle0004.png" type="Texture" id=24]
+[ext_resource path="res://img/fritz/idle0007.png" type="Texture" id=25]
+[ext_resource path="res://img/fritz/attack_back0000.png" type="Texture" id=26]
+[ext_resource path="res://img/fritz/attack_front0003.png" type="Texture" id=27]
+[ext_resource path="res://img/fritz/attack_side0001.png" type="Texture" id=28]
+[ext_resource path="res://img/fritz/attack_front0001.png" type="Texture" id=29]
+[ext_resource path="res://img/fritz/attack_side0000.png" type="Texture" id=30]
+[ext_resource path="res://img/fritz/attack_back0003.png" type="Texture" id=31]
+[ext_resource path="res://img/fritz/attack_side0003.png" type="Texture" id=32]
+[ext_resource path="res://img/fritz/attack_side0002.png" type="Texture" id=33]
+[ext_resource path="res://img/fritz/attack_front0002.png" type="Texture" id=34]
+[ext_resource path="res://img/fritz/attack_side0004.png" type="Texture" id=35]
+[ext_resource path="res://img/fritz/attack_back0002.png" type="Texture" id=36]
+[ext_resource path="res://img/fritz/attack_front0000.png" type="Texture" id=37]
+[ext_resource path="res://img/fritz/attack_back0001.png" type="Texture" id=38]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 24 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 25 ), ExtResource( 12 ) ],
 "loop": true,
-"name": "default",
+"name": "idle",
+"speed": 0.8
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 23 ), ExtResource( 16 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "run_front",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "run_right",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 28 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 35 ) ],
+"loop": false,
+"name": "attack_right",
+"speed": 9.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 29 ), ExtResource( 34 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "attack_down",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 38 ), ExtResource( 36 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "attack_up",
 "speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 27.4954, 22.8182 )
+extents = Vector2( 22.64, 13.4786 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -58 )
+position = Vector2( -1.53268, -39.6878 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
+animation = "attack_right"
+frame = 4
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.5874, -18.652 )
+position = Vector2( -7.605, -8.39893 )
 shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
+drag_margin_left = 0.3
+drag_margin_right = 0.3
+drag_margin_bottom = 0.4

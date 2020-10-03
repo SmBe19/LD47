@@ -11,12 +11,18 @@ class PlayerReplay:
 		res.inputs = inputs.duplicate()
 		res.start_pos = start_pos
 		return res
+		
+enum Direction {LEFT, RIGHT, UP, DOWN}
 
-var speed = 150
 var state = {}
 var is_replay = false
 var time = 0
 var replay_log = PlayerReplay.new()
+
+var last_direction = Direction.RIGHT
+
+var speed = 150
+var health = 3
 
 func _ready():
 	if is_replay:
@@ -35,6 +41,17 @@ func process_input_event(ev_str):
 		state[ev_str.substr(1)] = true
 	if ev_str[0] == '-':
 		state[ev_str.substr(1)] = false
+		
+func hurt(hp):
+	health -= hp
+	if is_replay:
+		self.modulate.g = 0.5
+		self.modulate.b = 0.5
+		yield(get_tree().create_timer(0.1), "timeout")
+		self.modulate.g = 1.0
+		self.modulate.b = 1.0
+	else:
+		get_tree().root.get_child(0).player_hurt()
 
 
 func handle_input_events():
@@ -42,8 +59,11 @@ func handle_input_events():
 		while !replay_log.inputs.empty() && replay_log.inputs[0][0] < time:
 			process_input_event(replay_log.inputs[0][1])
 			replay_log.inputs.pop_front()
+			
+		if Input.is_action_just_pressed("ui_accept"):
+			self.hurt(1)
 	else:
-		var keys = {"ui_up":"up", "ui_down":"down", "ui_left":"left", "ui_right":"right"}
+		var keys = {"move_up":"up", "move_down":"down", "move_left":"left", "move_right":"right"}
 		for k in keys:
 			if Input.is_action_just_pressed(k):
 				process_input_event("+"+keys[k])
@@ -67,3 +87,19 @@ func _process(delta):
 	if vel.length() > speed:
 		vel = vel.normalized() * speed
 	self.move_and_slide(vel);
+	
+	if vel.length() < 0.5 * speed:
+		$AnimatedSprite.animation = "idle"
+	else:
+		if abs(vel.x) > abs(vel.y) - 0.1 * speed:
+			$AnimatedSprite.animation = "run_right"
+			$AnimatedSprite.flip_h = vel.x < 0
+			last_direction = Direction.LEFT if vel.x < 0 else Direction.RIGHT
+		else:
+			if vel.y > 0:
+				last_direction = Direction.DOWN
+				$AnimatedSprite.animation = "run_front"
+			else:
+				last_direction = Direction.UP
+				$AnimatedSprite.animation = "run_front"
+			
