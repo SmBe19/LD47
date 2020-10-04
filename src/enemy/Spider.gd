@@ -8,5 +8,5 @@ func _ready():
 	._ready()
 
 func attack():
-	print("ant attack!")
+	print("spoder attack!")
 	.attack()

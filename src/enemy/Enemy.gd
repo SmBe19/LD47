@@ -1,18 +1,29 @@
 extends KinematicBody2D
 class_name Enemy
 
+var initial_position : Vector2
+var initial_health =  1
+
+var mirror = false
 
 var target  = null
-var aggression_distance = 512
-var speed = 100
+export(float) var aggression_distance = 512
+export(float) var speed = 100
 
-var attack_speed = 1
-var attack_time = INF
+export(float) var attack_speed = 1
+export(float) var attack_time = INF
+export(float) var damage = 1
 
-var health = 1
+export(float) var health = 1
 
 func _ready():
-	pass # Replace with function body.
+	initial_position = position
+	initial_health = health
+
+func on_reset():
+	position = initial_position
+	health = initial_health
+	attack_time = INF
 
 func hurt(damage):
 	health -= damage
@@ -23,8 +34,7 @@ func hurt(damage):
 	self.modulate.b = 1.0
 	
 	if health <= 0:
-		if get_parent() != null:
-			get_parent().remove_child(self)
+		self.position = Vector2(NAN,NAN)
 
 func find_target():
 	if !is_instance_valid(target):
@@ -39,9 +49,12 @@ func find_target():
 				break
 
 func attack():
+	target.hurt(damage)
 	pass
 
 func _physics_process(delta):
+	if is_nan(self.position.x):
+		return
 	find_target()
 	attack_time += delta
 	if target != null:
@@ -56,4 +69,4 @@ func _physics_process(delta):
 			else:
 				motion = collision.remainder.slide(collision.normal)
 				move_and_collide(motion)
-		$Sprite.flip_h = motion.x < 0
+		$Sprite.flip_h = mirror != (motion.x < 0)

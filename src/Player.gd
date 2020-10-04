@@ -21,8 +21,9 @@ var time = 0
 var replay_log = PlayerReplay.new()
 
 var last_direction = Direction.RIGHT
+var override_walk_animation : bool = false
 
-var speed = 150
+var speed = 200
 var health = 3
 var attack_range = 100
 var damage = 1
@@ -102,36 +103,49 @@ func _process(delta):
 	vel *= speed
 	if vel.length() > speed:
 		vel = vel.normalized() * speed
-	self.move_and_slide(vel);
 	
-	if vel.length() < 0.5 * speed:
-		$AnimatedSprite.animation = "idle"
-	else:
-		if abs(vel.x) > abs(vel.y) - 0.1 * speed:
-			$AnimatedSprite.animation = "run_right"
-			$AnimatedSprite.flip_h = vel.x < 0
-			last_direction = Direction.LEFT if vel.x < 0 else Direction.RIGHT
+	if !override_walk_animation:
+		self.move_and_slide(vel);
+		if vel.length() < 0.5 * speed:
+			$AnimatedSprite.animation = "idle"
 		else:
-			if vel.y > 0:
-				last_direction = Direction.DOWN
-				$AnimatedSprite.animation = "run_front"
+			if abs(vel.x) > abs(vel.y) - 0.1 * speed:
+				$AnimatedSprite.animation = "run_right"
+				$AnimatedSprite.flip_h = vel.x < 0
+				last_direction = Direction.LEFT if vel.x < 0 else Direction.RIGHT
 			else:
-				last_direction = Direction.UP
-				$AnimatedSprite.animation = "run_front"
-	
-	match last_direction:
-		Direction.UP:
-			$RayCast2D.cast_to = Vector2(0, -attack_range)
-		Direction.DOWN:
-			$RayCast2D.cast_to = Vector2(0, +attack_range)
-		Direction.LEFT:
-			$RayCast2D.cast_to = Vector2(-attack_range, 0)
-		Direction.RIGHT:
-			$RayCast2D.cast_to = Vector2(+attack_range, 0)
-	
+				if vel.y > 0:
+					last_direction = Direction.DOWN
+					$AnimatedSprite.animation = "run_front"
+				else:
+					last_direction = Direction.UP
+					$AnimatedSprite.animation = "run_front"
+		match last_direction:
+			Direction.UP:
+				$RayCast2D.cast_to = Vector2(0, -attack_range)
+			Direction.DOWN:
+				$RayCast2D.cast_to = Vector2(0, +attack_range)
+			Direction.LEFT:
+				$RayCast2D.cast_to = Vector2(-attack_range, 0)
+			Direction.RIGHT:
+				$RayCast2D.cast_to = Vector2(+attack_range, 0)
+		
 	
 	if is_pressed("attack"):
+		match last_direction:
+			Direction.UP:
+				$AnimatedSprite.animation = "attack_up"
+			Direction.DOWN:
+				$AnimatedSprite.animation = "attack_down"
+			Direction.LEFT, Direction.RIGHT:
+				$AnimatedSprite.animation = "attack_right"
+				$AnimatedSprite.flip_h = last_direction == Direction.LEFT;
+		override_walk_animation = true
+
+
+func _on_animation_finished():
+	if $AnimatedSprite.animation.begins_with("attack_"):
 		var collider = $RayCast2D.get_collider()
-		print(collider)
 		if collider && collider is Enemy:
 			collider.hurt(damage)
+		override_walk_animation = false

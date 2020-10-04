@@ -1,22 +1,10 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scn/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Game.gd" type="Script" id=2]
-[ext_resource path="res://scn/env/Tree1.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scn/env/Rock1.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scn/env/Portal.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scn/enemy/Ant.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scn/lvl/LevelTest.tscn" type="PackedScene" id=3]
 [ext_resource path="res://img/ui/spiral_color.png" type="Texture" id=7]
-[ext_resource path="res://scn/env/Grass1.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scn/env/Flower2.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scn/env/Flower1.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scn/env/Grass3.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scn/env/Tree2.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scn/env/Grass2.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scn/env/Tree3.tscn" type="PackedScene" id=14]
 [ext_resource path="res://img/ui/spiral_spiral.png" type="Texture" id=15]
-[ext_resource path="res://scn/Item.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scn/enemy/Crab.tscn" type="PackedScene" id=17]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -61,7 +49,6 @@ tracks/2/keys = {
 }
 
 [node name="Game" type="YSort"]
-position = Vector2( 100, 100 )
 script = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
@@ -134,44 +121,4 @@ margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 15 )
 
-[node name="Portal" parent="." instance=ExtResource( 5 )]
-position = Vector2( 370.326, -45.5257 )
-
-[node name="Tree1" parent="." instance=ExtResource( 3 )]
-position = Vector2( -372.004, 121.373 )
-
-[node name="Rock1" parent="." instance=ExtResource( 4 )]
-position = Vector2( 2.42937, -147.579 )
-
-[node name="Flower1" parent="." instance=ExtResource( 10 )]
-position = Vector2( -43.3831, 208.695 )
-
-[node name="Flower2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 189.965, 69.0037 )
-
-[node name="Grass1" parent="." instance=ExtResource( 8 )]
-position = Vector2( 147.105, 193.615 )
-
-[node name="Grass2" parent="." instance=ExtResource( 13 )]
-position = Vector2( -156.089, 221.394 )
-
-[node name="Grass3" parent="." instance=ExtResource( 11 )]
-position = Vector2( 46.3051, 220.6 )
-
-[node name="Tree2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 532.195, 375.385 )
-
-[node name="Tree3" parent="." instance=ExtResource( 14 )]
-position = Vector2( 767.8, 403.104 )
-
-[node name="Item" parent="." instance=ExtResource( 16 )]
-position = Vector2( 386.49, -573.974 )
-
-[node name="Item2" parent="." instance=ExtResource( 16 )]
-position = Vector2( 450.49, 474.026 )
-
-[node name="Ant" parent="." instance=ExtResource( 6 )]
-position = Vector2( -187.688, -1.37405 )
-
-[node name="Crab" parent="." instance=ExtResource( 17 )]
-position = Vector2( 139.065, -83.1425 )
+[node name="Level" parent="." instance=ExtResource( 3 )]

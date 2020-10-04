@@ -62,14 +62,14 @@ animations = [ {
 "speed": 9.0
 }, {
 "frames": [ ExtResource( 37 ), ExtResource( 29 ), ExtResource( 34 ), ExtResource( 27 ) ],
-"loop": true,
+"loop": false,
 "name": "attack_down",
-"speed": 5.0
+"speed": 9.0
 }, {
 "frames": [ ExtResource( 26 ), ExtResource( 38 ), ExtResource( 36 ), ExtResource( 31 ) ],
-"loop": true,
+"loop": false,
 "name": "attack_up",
-"speed": 5.0
+"speed": 9.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -102,3 +102,4 @@ drag_margin_bottom = 0.4
 [node name="RayCast2D" type="RayCast2D" parent="."]
 enabled = true
 cast_to = Vector2( 50, 0 )
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_animation_finished"]

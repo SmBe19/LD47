@@ -14,11 +14,13 @@ func _ready():
 	pass
 
 func restart():
+	time = 0
 	for ghost in $Ghosts.get_children():
 		$Ghosts.remove_child(ghost)
 	remove_child($Player)
 	var player = player_scene.instance()
 	player.set_name("Player")
+	player.position = $Level/SpawnPoint.position
 	player.position += Vector2(rand_range(-100, 100),rand_range(-100, 100))
 	add_child(player)
 	
@@ -27,7 +29,14 @@ func restart():
 		ghost.replay_log = x.duplicate()
 		ghost.is_replay = true
 		$Ghosts.add_child(ghost)
-		
+	
+	var stack = get_children()
+	while !stack.empty():
+		var node = stack.pop_back()
+		stack += node.get_children()
+		if node.has_method("on_reset"):
+			node.on_reset()
+
 func get_players():
 	var res = []
 	res.push_back($Player)
@@ -51,10 +60,23 @@ func _process(delta):
 	if time > limit - 1:
 		$UI/AnimationPlayer.play("Transition")
 	if time > limit:
-		time = 0
 		ghosts.append($Player.replay_log)
 		
 		for child in self.get_children():
 			if child is Player:
 				self.remove_child(child)
 		restart()
+
+
+func load_level(level):
+	if level == null || $UI/AnimationPlayer.is_playing():
+		# TODO: final level
+		return
+	$UI/AnimationPlayer.play("Transition")
+	yield(get_tree().create_timer(1), "timeout")
+	remove_child($Level)
+	var instance = load(level).instance()
+	instance.set_name("Level")
+	add_child(instance)
+	ghosts = []
+	restart()
