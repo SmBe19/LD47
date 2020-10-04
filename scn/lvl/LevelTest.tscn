@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scn/env/Flower2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scn/enemy/Spider.tscn" type="PackedScene" id=2]
@@ -6,7 +6,9 @@
 [ext_resource path="res://scn/env/Grass1.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scn/env/Grass2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scn/env/Tree1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scn/env/Pond.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scn/env/Tree2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scn/enemy/Bunny.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scn/env/Portal.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scn/env/Flower1.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scn/Item.tscn" type="PackedScene" id=12]
@@ -19,13 +21,18 @@
 
 [node name="SpawnPoint" type="Node2D" parent="."]
 
+[node name="Bunny" parent="." instance=ExtResource( 9 )]
+position = Vector2( -310.523, 0 )
+mode = 2
+linear_damp = 100.0
+
 [node name="Portal" parent="." instance=ExtResource( 10 )]
 position = Vector2( 370.326, -45.5257 )
 active = true
-target_level = "res://scn/lvl/LevelTut.tscn"
+target_level = "res://scn/lvl/Level3.tscn"
 
 [node name="Tree1" parent="." instance=ExtResource( 6 )]
-position = Vector2( -372.004, 121.373 )
+position = Vector2( -381.571, 121.373 )
 
 [node name="Rock1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2.42937, -147.579 )
@@ -66,3 +73,6 @@ health = 3.0
 
 [node name="Spider" parent="." instance=ExtResource( 2 )]
 position = Vector2( -65.9265, -362.388 )
+
+[node name="Pond" parent="." instance=ExtResource( 7 )]
+position = Vector2( -678.098, -147.119 )

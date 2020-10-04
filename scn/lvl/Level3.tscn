@@ -1,19 +1,67 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://scn/env/Portal.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scn/Item.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scn/enemy/Bear.tscn" type="PackedScene" id=1]
+[ext_resource path="res://img/env/stalactite2.png" type="Texture" id=2]
+[ext_resource path="res://img/env/stalactite1.png" type="Texture" id=3]
+[ext_resource path="res://img/env/rock3.png" type="Texture" id=4]
+[ext_resource path="res://img/env/stalacmite1.png" type="Texture" id=5]
+[ext_resource path="res://img/env/stalacmite2.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1320.06, 39.0452 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 34.3608, 220.987 )
 
 [node name="LevelTest" type="YSort"]
 
+[node name="Bear" parent="." instance=ExtResource( 1 )]
+position = Vector2( 759.189, 0 )
+
+[node name="rock3" type="Sprite" parent="."]
+position = Vector2( -140.006, 103.106 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -50 )
+
+[node name="stalacmite1" type="Sprite" parent="."]
+position = Vector2( 315.44, 25.1061 )
+texture = ExtResource( 5 )
+offset = Vector2( 0, -50 )
+
+[node name="stalacmite2" type="Sprite" parent="."]
+position = Vector2( 909.062, 22.2777 )
+texture = ExtResource( 6 )
+offset = Vector2( 0, -50 )
+
+[node name="stalactite1" type="Sprite" parent="."]
+position = Vector2( 602.905, -152.894 )
+texture = ExtResource( 3 )
+
+[node name="stalactite3" type="Sprite" parent="."]
+position = Vector2( 322.89, -152.894 )
+texture = ExtResource( 3 )
+
+[node name="stalactite2" type="Sprite" parent="."]
+position = Vector2( 831.427, -158.207 )
+texture = ExtResource( 2 )
+
 [node name="SpawnPoint" type="Node2D" parent="."]
-position = Vector2( 90.6119, -45.5257 )
+position = Vector2( -438.06, -60.6523 )
 
-[node name="Portal" parent="." instance=ExtResource( 10 )]
-position = Vector2( 370.326, -45.5257 )
-target_level = "res://scn/lvl/LevelTest.tscn"
+[node name="env_collision" type="StaticBody2D" parent="."]
 
-[node name="Item" parent="." instance=ExtResource( 12 )]
-position = Vector2( 370.326, -795.724 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="env_collision"]
+position = Vector2( 172.194, 61.4026 )
+shape = SubResource( 1 )
 
-[node name="Item2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 450.49, 662.813 )
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="env_collision"]
+position = Vector2( 172.194, -152.894 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="env_collision"]
+position = Vector2( -704.409, -35.3576 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="env_collision"]
+position = Vector2( 1060.37, -60.6523 )
+shape = SubResource( 2 )

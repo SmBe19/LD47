@@ -25,6 +25,10 @@ func on_reset():
 	health = initial_health
 	attack_time = INF
 
+
+func die():
+	self.position = Vector2(NAN,NAN)
+
 func hurt(damage):
 	health -= damage
 	self.modulate.g = 0.5
@@ -34,7 +38,7 @@ func hurt(damage):
 	self.modulate.b = 1.0
 	
 	if health <= 0:
-		self.position = Vector2(NAN,NAN)
+		die()
 
 func find_target():
 	if !is_instance_valid(target):
@@ -48,15 +52,7 @@ func find_target():
 				target = player
 				break
 
-func attack():
-	target.hurt(damage)
-	pass
-
-func _physics_process(delta):
-	if is_nan(self.position.x):
-		return
-	find_target()
-	attack_time += delta
+func move(delta):
 	if target != null:
 		var motion = (target.position-position).normalized() * speed * delta
 		var collision = move_and_collide(motion)
@@ -70,3 +66,14 @@ func _physics_process(delta):
 				motion = collision.remainder.slide(collision.normal)
 				move_and_collide(motion)
 		$Sprite.flip_h = mirror != (motion.x < 0)
+
+func attack():
+	target.hurt(damage)
+	pass
+
+func _physics_process(delta):
+	attack_time += delta
+	if is_nan(self.position.x):
+		return
+	find_target()
+	move(delta)

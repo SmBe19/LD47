@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Tuning.ogg-f0a133d177ec531d1c1ec93326aed600.oggstr"
+
+[deps]
+
+source_file="res://msc/Tuning.ogg"
+dest_files=[ "res://.import/Tuning.ogg-f0a133d177ec531d1c1ec93326aed600.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

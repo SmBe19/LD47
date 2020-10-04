@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/CursedMeadow.ogg-40c5de9ea33cdc6d3a75558030c017ee.oggstr"
+
+[deps]
+
+source_file="res://msc/CursedMeadow.ogg"
+dest_files=[ "res://.import/CursedMeadow.ogg-40c5de9ea33cdc6d3a75558030c017ee.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -6,6 +6,8 @@ var player_scene = preload("res://scn/Player.tscn")
 var time = 0
 var limit = 20
 
+var score = 0
+
 var ghosts = []
 
 func _ready():
@@ -14,6 +16,8 @@ func _ready():
 	pass
 
 func restart():
+	score += limit
+	
 	time = 0
 	for ghost in $Ghosts.get_children():
 		$Ghosts.remove_child(ghost)
@@ -56,12 +60,13 @@ func player_hurt():
 func _process(delta):
 	time += delta
 	$UI/ProgressBar.value = 1 - time / limit
-	$UI/Label.text = "%.1f s"%(limit-time)
+	$UI/Label.text = "%.1f s" % (limit-time)
 	if time > limit - 1:
 		$UI/AnimationPlayer.play("Transition")
+	$UI/HealthDisplay.region_rect.size.x = 64 * max(0, $Player.health)
 	if time > limit:
 		ghosts.append($Player.replay_log)
-		
+
 		for child in self.get_children():
 			if child is Player:
 				self.remove_child(child)
@@ -69,6 +74,7 @@ func _process(delta):
 
 
 func load_level(level):
+	score += time
 	if level == null || $UI/AnimationPlayer.is_playing():
 		# TODO: final level
 		return
@@ -79,4 +85,11 @@ func load_level(level):
 	instance.set_name("Level")
 	add_child(instance)
 	ghosts = []
+	score -= limit
 	restart()
+
+
+func finish():
+	score += time
+	print("score = ", score)
+	pass

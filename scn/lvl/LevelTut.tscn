@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
+[ext_resource path="res://scn/enemy/Bear.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scn/env/Portal.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scn/Item.tscn" type="PackedScene" id=12]
 
@@ -7,6 +8,9 @@
 
 [node name="SpawnPoint" type="Node2D" parent="."]
 position = Vector2( 90.6119, -45.5257 )
+
+[node name="Bear" parent="." instance=ExtResource( 1 )]
+position = Vector2( 428.524, 97.2456 )
 
 [node name="Portal" parent="." instance=ExtResource( 10 )]
 position = Vector2( 370.326, -45.5257 )

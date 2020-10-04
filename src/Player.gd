@@ -11,7 +11,7 @@ class PlayerReplay:
 		res.inputs = inputs.duplicate()
 		res.start_pos = start_pos
 		return res
-		
+
 enum Direction {LEFT, RIGHT, UP, DOWN}
 
 var prev_state = {}
@@ -50,7 +50,10 @@ func process_input_event(ev_str):
 	if ev_str[0] == '+':
 		state[ev_str.substr(1)] = true
 	if ev_str[0] == '-':
-		state[ev_str.substr(1)] = false
+		if ev_str[1] == "*":
+			state = {}
+		else:
+			state[ev_str.substr(1)] = false
 		
 func hurt(hp):
 	health -= hp
@@ -65,9 +68,11 @@ func hurt(hp):
 	
 	if health <= 0:
 		if is_replay:
-			get_parent().remove_child(self)
+			if get_parent() != null:
+				get_parent().remove_child(self)
 		else:
 			# end this iteration
+			process_input_event("-*") # release all keys
 			var game = get_tree().root.get_child(0)
 			if game.time < game.limit - 1:
 				game.time = game.limit - 1
@@ -146,6 +151,6 @@ func _process(delta):
 func _on_animation_finished():
 	if $AnimatedSprite.animation.begins_with("attack_"):
 		var collider = $RayCast2D.get_collider()
-		if collider && collider is Enemy:
-			collider.hurt(damage)
+		if collider and collider.has_method("hurt") and !collider.has_method("player_marker"):
+			collider.hurt(1000)
 		override_walk_animation = false

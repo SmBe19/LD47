@@ -35,4 +35,15 @@ shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ActivationArea"]
 shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 34.4871
+margin_top = -327.032
+margin_right = 74.4871
+margin_bottom = -313.032
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0/2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="body_entered" from="ActivationArea" to="." method="_on_body_entered"]

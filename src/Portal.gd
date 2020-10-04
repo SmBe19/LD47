@@ -11,6 +11,7 @@ func set_crystal_count(_count):
 	crystal_count = _count
 	if crystal_count >= crystal_needed:
 		set_active(true)
+	$Label.text = "%d/%d" % [crystal_count, crystal_needed]
 
 func set_active(_active):
 	active = _active
@@ -19,12 +20,9 @@ func set_active(_active):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	set_crystal_count(crystal_count)
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 
 func _on_body_entered(body):

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/cratedestroy.wav-748d7faed079946ba84c2d9d991ac621.sample"
+
+[deps]
+
+source_file="res://snd/cratedestroy.wav"
+dest_files=[ "res://.import/cratedestroy.wav-748d7faed079946ba84c2d9d991ac621.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
