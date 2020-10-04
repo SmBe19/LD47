@@ -11,6 +11,9 @@ func set_crystal_count(_count):
 	crystal_count = _count
 	if crystal_count >= crystal_needed:
 		set_active(true)
+		$"/root/Game".play_at("portalactivate", position)
+	else:
+		$"/root/Game".play_at("crystalactivate", position)
 	$Label.text = "%d/%d" % [crystal_count, crystal_needed]
 
 func set_active(_active):
@@ -28,6 +31,7 @@ func _ready():
 func _on_body_entered(body):
 	if body is Player:
 		if active and !body.is_replay:
+			$"/root/Game".play_at("portalactivate", position)
 			get_tree().root.get_child(0).load_level(target_level)
 	if body is Item:
 		set_crystal_count(crystal_count + 1)

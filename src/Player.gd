@@ -54,6 +54,14 @@ func process_input_event(ev_str):
 			state = {}
 		else:
 			state[ev_str.substr(1)] = false
+	if ev_str[0] == '@':
+		match ev_str.substr(1):
+			"hp":
+				health += 1
+			"dmg":
+				damage += 1
+		if get_tree(): # don't add powerups again if
+			$"/root/Game/".powerups.push_back(ev_str)
 		
 func hurt(hp):
 	health -= hp
@@ -153,4 +161,24 @@ func _on_animation_finished():
 		var collider = $RayCast2D.get_collider()
 		if collider and collider.has_method("hurt") and !collider.has_method("player_marker"):
 			collider.hurt(1000)
+			$"/root/Game".play_at("attack", position)
 		override_walk_animation = false
+
+
+func _on_frame_changed():
+	var step_frames = []
+	match $AnimatedSprite.animation:
+		"run_right":
+			step_frames = [5,11]
+		"run_front":
+			step_frames = [0,3]
+	if $AnimatedSprite.frame in step_frames:
+		$"/root/Game".play_at("walk", position)
+
+
+func learn_hp(x):
+	process_input_event("@hp")
+	
+
+func learn_dmg(x):
+	process_input_event("@dmg")

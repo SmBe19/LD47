@@ -6,6 +6,7 @@ var initial_health =  1
 
 var mirror = false
 
+
 var target  = null
 export(float) var aggression_distance = 512
 export(float) var speed = 100
@@ -27,6 +28,7 @@ func on_reset():
 
 
 func die():
+	get_tree().root.get_child(0).play_at("enemydeath", position)
 	self.position = Vector2(NAN,NAN)
 
 func hurt(damage):

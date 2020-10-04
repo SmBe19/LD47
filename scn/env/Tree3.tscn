@@ -1,11 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://img/env/tree3.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Bom
+
+"
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 62.1631
 
 [node name="Tree3" type="StaticBody2D"]
+script = SubResource( 2 )
 
 [node name="tree3" type="Sprite" parent="."]
 position = Vector2( 0, -185.078 )

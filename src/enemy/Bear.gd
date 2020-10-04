@@ -18,6 +18,7 @@ func _ready():
 	initial_health = 10
 	health = initial_health
 	on_reset()
+	get_tree().root.get_child(0).play_music("res://msc/CursedMeadow.ogg", true)
 
 func move(delta):
 	pass

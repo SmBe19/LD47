@@ -1,4 +1,5 @@
 extends RigidBody2D
+class_name Bunny
 
 
 var initial_position : Vector2
@@ -11,8 +12,11 @@ func _ready():
 var reset_queued = false
 var death_queued = false
 
+var on_fire = false
+
 func on_reset():
 	reset_queued = true
+	on_fire = false
 	print("queued reset!")
 
 func hurt(hp):
@@ -21,6 +25,19 @@ func hurt(hp):
 	yield(get_tree().create_timer(0.1), "timeout")
 	self.modulate.g = 1.0
 	self.modulate.b = 1.0
+	
+	if on_fire:
+		var players = $"/root/Game".get_players()
+		var closest = players[0]
+		for player in players:
+			if player.position.distance_to(position) < closest.position.distance_to(position):
+				closest = player
+		closest.health += 1
+	else:
+		var meat = preload("res://scn/Item.tscn").instance()
+		meat.type = Item.ItemType.Meat
+		meat.position = position
+		get_parent().add_child(meat)
 	
 	death_queued = true
 

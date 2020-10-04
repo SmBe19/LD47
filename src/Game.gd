@@ -9,10 +9,12 @@ var limit = 20
 var score = 0
 
 var ghosts = []
+var powerups = [] # list of powerup strings (@hp, @dmg), persistent
 
 func _ready():
 	$UI/AnimationPlayer.play("Transition")
 	$UI/AnimationPlayer.seek(1.0)
+	_on_mute_toggled($UI/Mute.pressed)
 	pass
 
 func restart():
@@ -26,6 +28,8 @@ func restart():
 	player.set_name("Player")
 	player.position = $Level/SpawnPoint.position
 	player.position += Vector2(rand_range(-100, 100),rand_range(-100, 100))
+	for powerup in powerups:
+		player.process_input_event(powerup)
 	add_child(player)
 	
 	for x in ghosts:
@@ -63,6 +67,7 @@ func _process(delta):
 	$UI/Label.text = "%.1f s" % (limit-time)
 	if time > limit - 1:
 		$UI/AnimationPlayer.play("Transition")
+		play_at("timeloop", Vector2(NAN, NAN))
 	$UI/HealthDisplay.region_rect.size.x = 64 * max(0, $Player.health)
 	if time > limit:
 		ghosts.append($Player.replay_log)
@@ -107,3 +112,31 @@ func submit_highscore(username: String, score: int):
 	var pre_magic = Secret.secret + "|" + str(len(scorestr)) + "|" + scorestr
 	var magic = pre_magic.md5_text()
 	$HTTPRequestSubmitHS.request("https://ludumdare.games.smeanox.com/LD47/hs/submit.php?username=" + username.percent_encode() + "&score=" + str(score) + "&magic=" + magic)
+
+func play_music(track_name, keep_position = false):
+	var playback_pos = 0
+	if keep_position:
+		playback_pos = $MusicPlayer.get_playback_position()
+	$MusicPlayer.stream = load(track_name)
+	$MusicPlayer.play(playback_pos)
+
+func play_at(sound, position: Vector2):
+	var soundplayer = null
+	if is_nan(position.x):
+		soundplayer = AudioStreamPlayer.new()
+	else:
+		soundplayer = AudioStreamPlayer2D.new()
+		soundplayer.position = position
+	if sound is String:
+		soundplayer.stream = Sounds.Get(sound)
+	elif sound is AudioStream:
+		soundplayer.stream = sound
+	add_child(soundplayer)
+	soundplayer.play()
+	soundplayer.connect("finished", self, "remove_child", [soundplayer])
+
+func _on_mute_toggled(button_pressed):
+	if button_pressed:
+		$MusicPlayer.stream_paused = true
+	else:
+		$MusicPlayer.stream_paused = false

@@ -1,12 +1,13 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scn/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Game.gd" type="Script" id=2]
 [ext_resource path="res://scn/lvl/LevelTest.tscn" type="PackedScene" id=3]
-[ext_resource path="res://img/enemy/bee.png" type="Texture" id=4]
+[ext_resource path="res://img/ui/mute_off.png" type="Texture" id=4]
 [ext_resource path="res://msc/EnchantedMeadow.ogg" type="AudioStream" id=5]
-[ext_resource path="res://icon.png" type="Texture" id=6]
+[ext_resource path="res://img/ui/heart.png" type="Texture" id=6]
 [ext_resource path="res://img/ui/spiral_color.png" type="Texture" id=7]
+[ext_resource path="res://img/ui/mute_on.png" type="Texture" id=8]
 [ext_resource path="res://img/ui/spiral_spiral.png" type="Texture" id=15]
 
 [sub_resource type="StyleBoxEmpty" id=1]
@@ -98,15 +99,16 @@ texture = ExtResource( 6 )
 centered = false
 flip_h = true
 region_enabled = true
-region_rect = Rect2( 0, 0, 128, 64 )
+region_rect = Rect2( 0, 0, 192, 64 )
 
 [node name="Mute" type="TextureButton" parent="UI"]
-margin_left = 881.579
-margin_top = 300.152
-margin_right = 945.579
-margin_bottom = 364.152
+margin_left = 945.762
+margin_top = 524.794
+margin_right = 1009.76
+margin_bottom = 588.794
 toggle_mode = true
-texture_normal = ExtResource( 6 )
+pressed = true
+texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -159,8 +161,10 @@ __meta__ = {
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+autoplay = true
 
 [node name="HTTPRequestSubmitHS" type="HTTPRequest" parent="."]
 
 [node name="HTTPRequestGetHS" type="HTTPRequest" parent="."]
+[connection signal="toggled" from="UI/Mute" to="." method="_on_mute_toggled"]
 [connection signal="request_completed" from="HTTPRequestGetHS" to="." method="_get_highscore_response"]
