@@ -11,7 +11,7 @@ Ludum Dare 47
  x Crystal in Portal
  x Enemy Death
  x Crate Destruction
- - Tree Destruction
+ x Tree Destruction
  - Fire Start
  - Fire
  - Book Upgrade
