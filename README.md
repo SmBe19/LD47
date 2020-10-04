@@ -5,5 +5,4 @@ Ludum Dare 47
 
  - More interesting scenery, e.g. cliff (have to walk around)
  - Cave decoration
- - Crates
  - Ant & Crab & Spider walk animation
