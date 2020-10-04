@@ -4,13 +4,13 @@ Ludum Dare 47
 ## Sounddesign TODO
 
  - Soundtrack
- - Time Loop Reset
- - Player Attack
- - Player Walk
- - Portal Activate
- - Crystal in Portal
- - Enemy Death
- - Crate Destruction
+ x Time Loop Reset
+ x Player Attack
+ x Player Walk
+ x Portal Activate
+ x Crystal in Portal
+ x Enemy Death
+ x Crate Destruction
  - Tree Destruction
  - Fire Start
  - Fire
