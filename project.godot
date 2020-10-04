@@ -28,12 +28,18 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://src/Player.gd"
+}, {
+"base": "Reference",
+"class": "Secret",
+"language": "GDScript",
+"path": "res://src/Secret.gd"
 } ]
 _global_script_class_icons={
 "Bear": "",
 "Enemy": "",
 "Item": "",
-"Player": ""
+"Player": "",
+"Secret": ""
 }
 
 [application]

@@ -159,3 +159,8 @@ __meta__ = {
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
+
+[node name="HTTPRequestSubmitHS" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequestGetHS" type="HTTPRequest" parent="."]
+[connection signal="request_completed" from="HTTPRequestGetHS" to="." method="_get_highscore_response"]

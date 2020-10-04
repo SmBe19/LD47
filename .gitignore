@@ -9,3 +9,5 @@ export_presets.cfg
 data_*/
 
 *~
+
+src/Secret.gd
