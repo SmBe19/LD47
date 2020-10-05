@@ -24,6 +24,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/enemy/Bunny.gd"
 }, {
+"base": "StaticBody2D",
+"class": "Cave",
+"language": "GDScript",
+"path": "res://src/Cave.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "Enemy",
 "language": "GDScript",
@@ -58,6 +63,7 @@ _global_script_class_icons={
 "Bear": "",
 "Bom": "",
 "Bunny": "",
+"Cave": "",
 "Enemy": "",
 "Item": "",
 "Player": "",

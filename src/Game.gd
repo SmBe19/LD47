@@ -109,7 +109,7 @@ func _process(delta):
 					indicators.push_back([node.global_position, preload("res://img/ui/crystalindicator.png")])
 				Item.ItemType.HpBook, Item.ItemType.DmgBook:
 					indicators.push_back([node.global_position, preload("res://img/ui/bookindicator.png")])
-		if node is Portal:
+		if node is Portal or node is Cave:
 			indicators.push_back([node.global_position, preload("res://img/ui/portalindicator.png")])
 
 	$UI/CrystalIndicators.indicators = indicators
