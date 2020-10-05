@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://scn/enemy/Bear.tscn" type="PackedScene" id=1]
 [ext_resource path="res://img/env/stalactite2.png" type="Texture" id=2]
@@ -34,6 +34,8 @@
 [ext_resource path="res://scn/env/Vwkafer.tscn" type="PackedScene" id=32]
 [ext_resource path="res://scn/env/Rock4.tscn" type="PackedScene" id=33]
 [ext_resource path="res://img/env/mountain.png" type="Texture" id=34]
+[ext_resource path="res://img/enemy/cobold.png" type="Texture" id=35]
+[ext_resource path="res://img/enemy/cobold_attack.png" type="Texture" id=36]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1320.06, 39.0452 )
@@ -548,6 +550,406 @@ position = Vector2( 2788.23, -230.352 )
 
 [node name="Flower22" parent="Spiders/env" instance=ExtResource( 26 )]
 position = Vector2( 2607.47, -2.02405 )
+
+[node name="Rock22" parent="Spiders/env" instance=ExtResource( 31 )]
+position = Vector2( 1134.01, -646.045 )
+
+[node name="Rock23" parent="Spiders/env" instance=ExtResource( 29 )]
+position = Vector2( 418.376, -872.831 )
+
+[node name="Rock24" parent="Spiders/env" instance=ExtResource( 33 )]
+position = Vector2( -120.87, -872.831 )
+
+[node name="Rock25" parent="Spiders/env" instance=ExtResource( 13 )]
+position = Vector2( -745.791, -782.117 )
+
+[node name="Rock26" parent="Spiders/env" instance=ExtResource( 31 )]
+position = Vector2( -922.18, -383.982 )
+
+[node name="Rock27" parent="Spiders/env" instance=ExtResource( 29 )]
+position = Vector2( -1033.05, 54.4708 )
+
+[node name="Rock28" parent="Spiders/env" instance=ExtResource( 33 )]
+position = Vector2( -929.601, 305.869 )
+
+[node name="Rock29" parent="Spiders/env" instance=ExtResource( 31 )]
+position = Vector2( -801.601, 541.869 )
+
+[node name="Rock30" parent="Spiders/env" instance=ExtResource( 29 )]
+position = Vector2( -517.601, 797.869 )
+
+[node name="Rock31" parent="Spiders/env" instance=ExtResource( 33 )]
+position = Vector2( -245.601, 885.869 )
+
+[node name="Rock32" parent="Spiders/env" instance=ExtResource( 31 )]
+position = Vector2( -65.6013, 1125.87 )
+
+[node name="Rock33" parent="Spiders/env" instance=ExtResource( 29 )]
+position = Vector2( 426.399, 1201.87 )
+
+[node name="Rock34" parent="Spiders/env" instance=ExtResource( 33 )]
+position = Vector2( 718.399, 1049.87 )
+
+[node name="Rock35" parent="Spiders/env" instance=ExtResource( 29 )]
+position = Vector2( 1066.4, 933.869 )
+
+[node name="Rock36" parent="Spiders/env" instance=ExtResource( 31 )]
+position = Vector2( -633.601, -494.131 )
+
+[node name="Rock37" parent="Spiders/env" instance=ExtResource( 29 )]
+position = Vector2( -105.601, -618.131 )
+
+[node name="Rock38" parent="Spiders/env" instance=ExtResource( 33 )]
+position = Vector2( -949.601, -178.131 )
+
+[node name="Rock39" parent="Spiders/env" instance=ExtResource( 31 )]
+position = Vector2( 678.399, -478.131 )
+
+[node name="Rock40" parent="Spiders/env" instance=ExtResource( 29 )]
+position = Vector2( 1226.4, -238.131 )
+
+[node name="Rock41" parent="Spiders/env" instance=ExtResource( 29 )]
+position = Vector2( 602.399, 241.869 )
+
+[node name="Rock42" parent="Spiders/env" instance=ExtResource( 31 )]
+position = Vector2( 526.399, 709.869 )
+
+[node name="Rock43" parent="Spiders/env" instance=ExtResource( 33 )]
+position = Vector2( 494.399, -210.131 )
+
+[node name="Rock44" parent="Spiders/env" instance=ExtResource( 29 )]
+position = Vector2( -21.6013, -214.131 )
+
+[node name="Rock45" parent="Spiders/env" instance=ExtResource( 31 )]
+position = Vector2( -381.601, 185.869 )
+
+[node name="Rock46" parent="Spiders/env" instance=ExtResource( 33 )]
+position = Vector2( 2.39868, 509.869 )
+
+[node name="Shroom3" parent="Spiders/env" instance=ExtResource( 27 )]
+position = Vector2( 1438.4, 229.869 )
+
+[node name="Tree7" parent="Spiders/env" instance=ExtResource( 11 )]
+position = Vector2( 1606.4, 841.869 )
+
+[node name="Tree8" parent="Spiders/env" instance=ExtResource( 19 )]
+position = Vector2( 1914.4, 261.869 )
+
+[node name="Tree9" parent="Spiders/env" instance=ExtResource( 11 )]
+position = Vector2( 2142.4, 449.869 )
+
+[node name="Shroom4" parent="Spiders/env" instance=ExtResource( 27 )]
+position = Vector2( 1154.4, 565.869 )
+
+[node name="Tree10" parent="Spiders/env" instance=ExtResource( 11 )]
+position = Vector2( 2358.4, 21.8691 )
+
+[node name="Tree11" parent="Spiders/env" instance=ExtResource( 19 )]
+position = Vector2( 1890.4, 877.869 )
+
+[node name="Tree12" parent="Spiders/env" instance=ExtResource( 19 )]
+position = Vector2( 418.399, -118.131 )
+
+[node name="Tree13" parent="Spiders/env" instance=ExtResource( 11 )]
+position = Vector2( 738.399, -6.13086 )
+
+[node name="Shroom5" parent="Spiders/env" instance=ExtResource( 27 )]
+position = Vector2( 294.399, 753.869 )
+
+[node name="Shroom6" parent="Spiders/env" instance=ExtResource( 27 )]
+position = Vector2( 766.399, 493.869 )
+
+[node name="Shroom7" parent="Spiders/env" instance=ExtResource( 27 )]
+position = Vector2( -209.601, 545.869 )
+
+[node name="Tree14" parent="Spiders/env" instance=ExtResource( 11 )]
+position = Vector2( -261.601, -130.131 )
+
+[node name="Tree15" parent="Spiders/env" instance=ExtResource( 19 )]
+position = Vector2( -497.601, -46.1309 )
+
+[node name="Flower23" parent="Spiders/env" instance=ExtResource( 18 )]
+position = Vector2( -378.17, 417.151 )
+
+[node name="Flower24" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( 263.14, 334.607 )
+
+[node name="Flower25" parent="Spiders/env" instance=ExtResource( 26 )]
+position = Vector2( 225.042, -147.963 )
+
+[node name="Flower26" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( 437.754, 55.224 )
+
+[node name="Flower27" parent="Spiders/env" instance=ExtResource( 18 )]
+position = Vector2( -628.98, 226.663 )
+
+[node name="Flower28" parent="Spiders/env" instance=ExtResource( 18 )]
+position = Vector2( 466.327, 391.753 )
+
+[node name="Flower29" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( -98.7878, 36.1752 )
+
+[node name="Flower30" parent="Spiders/env" instance=ExtResource( 26 )]
+position = Vector2( 634.591, -52.7193 )
+
+[node name="Flower31" parent="Spiders/env" instance=ExtResource( 18 )]
+position = Vector2( 1012.39, -132.089 )
+
+[node name="Flower32" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( 1136.21, 61.5736 )
+
+[node name="Flower33" parent="Spiders/env" instance=ExtResource( 26 )]
+position = Vector2( 955.246, 302.859 )
+
+[node name="Flower34" parent="Spiders/env" instance=ExtResource( 18 )]
+position = Vector2( 145.672, -440.045 )
+
+[node name="Flower35" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( -398.013, -222.16 )
+
+[node name="Flower36" parent="Spiders/env" instance=ExtResource( 26 )]
+position = Vector2( -668.846, -168.706 )
+
+[node name="Flower37" parent="Spiders/env" instance=ExtResource( 18 )]
+position = Vector2( 186.417, -332.631 )
+
+[node name="Flower38" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( 877.754, -161.579 )
+
+[node name="Flower39" parent="Spiders/env" instance=ExtResource( 26 )]
+position = Vector2( 115.145, 287.434 )
+
+[node name="Flower40" parent="Spiders/env" instance=ExtResource( 26 )]
+position = Vector2( -30.1879, 242.289 )
+
+[node name="Flower41" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( 103.003, -45.499 )
+
+[node name="Flower42" parent="Spiders/env" instance=ExtResource( 18 )]
+position = Vector2( 324.196, -264.313 )
+
+[node name="Flower43" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( 386.035, 175.693 )
+
+[node name="Flower44" parent="Spiders/env" instance=ExtResource( 26 )]
+position = Vector2( 1061.5, -12.2012 )
+
+[node name="Flower45" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( 1420.64, 451.589 )
+
+[node name="Flower46" parent="Spiders/env" instance=ExtResource( 18 )]
+position = Vector2( 887.677, 764.238 )
+
+[node name="Flower47" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( 519.094, 902.082 )
+
+[node name="Flower48" parent="Spiders/env" instance=ExtResource( 26 )]
+position = Vector2( -41.2733, 770.231 )
+
+[node name="Flower49" parent="Spiders/env" instance=ExtResource( 18 )]
+position = Vector2( -292.989, 701.309 )
+
+[node name="Flower50" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( 78.5913, 656.36 )
+
+[node name="Flower51" parent="Spiders/env" instance=ExtResource( 26 )]
+position = Vector2( 1684.78, 251.817 )
+
+[node name="Flower52" parent="Spiders/env" instance=ExtResource( 18 )]
+position = Vector2( 1957.47, 434.611 )
+
+[node name="Flower53" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( 2248.14, 782.218 )
+
+[node name="Flower54" parent="Spiders/env" instance=ExtResource( 26 )]
+position = Vector2( 1771.68, 833.16 )
+
+[node name="Flower55" parent="Spiders/env" instance=ExtResource( 18 )]
+position = Vector2( 1322.19, 926.055 )
+
+[node name="Flower56" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( 1043.5, 1120.84 )
+
+[node name="Flower57" parent="Spiders/env" instance=ExtResource( 26 )]
+position = Vector2( 659.935, 1225.72 )
+
+[node name="Flower58" parent="Spiders/env" instance=ExtResource( 18 )]
+position = Vector2( 2916.3, 549.141 )
+
+[node name="Flower59" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( 3659.66, 47.9667 )
+
+[node name="Flower60" parent="Spiders/env" instance=ExtResource( 18 )]
+position = Vector2( 2482.4, 475.142 )
+
+[node name="Flower61" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( 4231.47, -234.575 )
+
+[node name="Flower62" parent="Spiders/env" instance=ExtResource( 18 )]
+position = Vector2( 3667.32, 436.037 )
+
+[node name="Flower63" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( 3774.8, 474.22 )
+
+[node name="Flower64" parent="Spiders/env" instance=ExtResource( 16 )]
+position = Vector2( 3576.81, 468.563 )
+
+[node name="Grass60" parent="Spiders/env" instance=ExtResource( 14 )]
+position = Vector2( 181.614, 413.437 )
+
+[node name="Grass61" parent="Spiders/env" instance=ExtResource( 12 )]
+position = Vector2( 589.828, 476.433 )
+
+[node name="Grass62" parent="Spiders/env" instance=ExtResource( 21 )]
+position = Vector2( 786.376, 809.053 )
+
+[node name="Grass63" parent="Spiders/env" instance=ExtResource( 28 )]
+position = Vector2( 75.7805, 851.89 )
+
+[node name="Grass64" parent="Spiders/env" instance=ExtResource( 24 )]
+position = Vector2( -186.283, 680.541 )
+
+[node name="Grass65" parent="Spiders/env" instance=ExtResource( 23 )]
+position = Vector2( -158.565, 146.334 )
+
+[node name="Grass66" parent="Spiders/env" instance=ExtResource( 25 )]
+position = Vector2( -239.2, 7.7428 )
+
+[node name="Grass67" parent="Spiders/env" instance=ExtResource( 14 )]
+position = Vector2( -579.379, 413.438 )
+
+[node name="Grass68" parent="Spiders/env" instance=ExtResource( 12 )]
+position = Vector2( -453.387, 524.311 )
+
+[node name="Grass69" parent="Spiders/env" instance=ExtResource( 21 )]
+position = Vector2( -493.704, 320.203 )
+
+[node name="Grass70" parent="Spiders/env" instance=ExtResource( 28 )]
+position = Vector2( -780.966, 216.89 )
+
+[node name="Grass71" parent="Spiders/env" instance=ExtResource( 24 )]
+position = Vector2( -662.534, -57.7729 )
+
+[node name="Grass72" parent="Spiders/env" instance=ExtResource( 23 )]
+position = Vector2( -748.208, -339.995 )
+
+[node name="Grass73" parent="Spiders/env" instance=ExtResource( 25 )]
+position = Vector2( -382.831, -95.5705 )
+
+[node name="Grass74" parent="Spiders/env" instance=ExtResource( 14 )]
+position = Vector2( -108.168, -123.289 )
+
+[node name="Grass75" parent="Spiders/env" instance=ExtResource( 14 )]
+position = Vector2( -75.2432, 373.981 )
+
+[node name="Grass76" parent="Spiders/env" instance=ExtResource( 12 )]
+position = Vector2( 67.4617, 93.328 )
+
+[node name="Grass77" parent="Spiders/env" instance=ExtResource( 21 )]
+position = Vector2( 283.897, -37.4847 )
+
+[node name="Grass78" parent="Spiders/env" instance=ExtResource( 28 )]
+position = Vector2( 295.789, 195.6 )
+
+[node name="Grass79" parent="Spiders/env" instance=ExtResource( 24 )]
+position = Vector2( 381.412, 302.628 )
+
+[node name="Grass80" parent="Spiders/env" instance=ExtResource( 23 )]
+position = Vector2( 164.977, 554.74 )
+
+[node name="Grass81" parent="Spiders/env" instance=ExtResource( 25 )]
+position = Vector2( 438.494, 488.145 )
+
+[node name="Grass82" parent="Spiders/env" instance=ExtResource( 14 )]
+position = Vector2( 241.947, 843.443 )
+
+[node name="Grass83" parent="Spiders/env" instance=ExtResource( 12 )]
+position = Vector2( -685.355, 326.875 )
+
+[node name="Grass84" parent="Spiders/env" instance=ExtResource( 21 )]
+position = Vector2( -582.042, 100.089 )
+
+[node name="Grass85" parent="Spiders/env" instance=ExtResource( 28 )]
+position = Vector2( 347.78, 59.7716 )
+
+[node name="Grass86" parent="Spiders/env" instance=ExtResource( 24 )]
+position = Vector2( -30.1963, -479.475 )
+
+[node name="Grass87" parent="Spiders/env" instance=ExtResource( 23 )]
+position = Vector2( 594.724, -348.443 )
+
+[node name="Grass88" parent="Spiders/env" instance=ExtResource( 25 )]
+position = Vector2( 1239.8, 130.327 )
+
+[node name="Grass89" parent="Spiders/env" instance=ExtResource( 14 )]
+position = Vector2( 685.439, 868.641 )
+
+[node name="Grass90" parent="Spiders/env" instance=ExtResource( 12 )]
+position = Vector2( -670.236, -323.244 )
+
+[node name="Grass91" parent="Spiders/env" instance=ExtResource( 21 )]
+position = Vector2( -110.831, -413.959 )
+
+[node name="Grass92" parent="Spiders/env" instance=ExtResource( 28 )]
+position = Vector2( 766.074, 667.053 )
+
+[node name="Grass93" parent="Spiders/env" instance=ExtResource( 24 )]
+position = Vector2( 909.705, 949.276 )
+
+[node name="Grass94" parent="Spiders/env" instance=ExtResource( 23 )]
+position = Vector2( 337.701, 896.359 )
+
+[node name="Grass95" parent="Spiders/env" instance=ExtResource( 25 )]
+position = Vector2( 231.867, 1097.95 )
+
+[node name="Grass96" parent="Spiders/env" instance=ExtResource( 14 )]
+position = Vector2( 1287.68, 394.91 )
+
+[node name="Grass97" parent="Spiders/env" instance=ExtResource( 12 )]
+position = Vector2( 1466.59, 576.339 )
+
+[node name="Grass98" parent="Spiders/env" instance=ExtResource( 21 )]
+position = Vector2( 1070.98, 165.605 )
+
+[node name="Grass99" parent="Spiders/env" instance=ExtResource( 28 )]
+position = Vector2( 1648.02, 64.8117 )
+
+[node name="Grass100" parent="Spiders/env" instance=ExtResource( 24 )]
+position = Vector2( 1479.19, -144.335 )
+
+[node name="Grass101" parent="Spiders/env" instance=ExtResource( 23 )]
+position = Vector2( 1935.28, -209.851 )
+
+[node name="Grass102" parent="Spiders/env" instance=ExtResource( 25 )]
+position = Vector2( 2202.38, -56.1401 )
+
+[node name="Grass103" parent="Spiders/env" instance=ExtResource( 14 )]
+position = Vector2( 2063.79, -300.565 )
+
+[node name="Rock47" parent="Spiders/env" instance=ExtResource( 31 )]
+position = Vector2( 2571.74, -543.384 )
+
+[node name="Rock48" parent="Spiders/env" instance=ExtResource( 29 )]
+position = Vector2( 2187.31, -396.552 )
+
+[node name="Rock49" parent="Spiders/env" instance=ExtResource( 33 )]
+position = Vector2( 2846.72, -764.967 )
+
+[node name="cobold" type="Sprite" parent="Spiders/env"]
+position = Vector2( 3308.57, -895.782 )
+texture = ExtResource( 35 )
+
+[node name="cobold_attack" type="Sprite" parent="Spiders/env"]
+position = Vector2( 668.258, -610.126 )
+texture = ExtResource( 36 )
+
+[node name="cobold_attack2" type="Sprite" parent="Spiders/env"]
+position = Vector2( -1031.51, -134.149 )
+texture = ExtResource( 36 )
+
+[node name="cobold2" type="Sprite" parent="Spiders/env"]
+position = Vector2( 4545.66, 898.517 )
+texture = ExtResource( 35 )
 
 [node name="enemy" type="YSort" parent="Spiders"]
 

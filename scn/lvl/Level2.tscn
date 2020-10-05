@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://scn/env/Tree1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scn/env/Rock1.tscn" type="PackedScene" id=2]
@@ -28,6 +28,8 @@
 [ext_resource path="res://scn/env/Flower1.tscn" type="PackedScene" id=26]
 [ext_resource path="res://scn/env/Flower3.tscn" type="PackedScene" id=27]
 [ext_resource path="res://scn/env/Vwkafer.tscn" type="PackedScene" id=28]
+[ext_resource path="res://img/enemy/cobold.png" type="Texture" id=29]
+[ext_resource path="res://img/enemy/cobold_attack.png" type="Texture" id=30]
 
 [node name="LevelTest" type="YSort"]
 
@@ -1352,6 +1354,14 @@ position = Vector2( -1117.08, 2402.79 )
 
 [node name="Grass267" parent="Env" instance=ExtResource( 20 )]
 position = Vector2( -2387.85, 2445.5 )
+
+[node name="cobold" type="Sprite" parent="Env"]
+position = Vector2( -1907.49, 48.6158 )
+texture = ExtResource( 29 )
+
+[node name="cobold_attack" type="Sprite" parent="Env"]
+position = Vector2( -3035.58, 1160.75 )
+texture = ExtResource( 30 )
 
 [node name="enemy" type="YSort" parent="."]
 
