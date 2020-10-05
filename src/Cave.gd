@@ -12,4 +12,4 @@ func _on_body_entered(body):
 				ap.seek(ap.current_animation_length, true)
 			ap.play("CaveEnter")
 		yield(get_tree().create_timer(1), "timeout")
-		body.position = get_node(teleport_target).global_position
+		body.teleport(get_node(teleport_target).global_position)

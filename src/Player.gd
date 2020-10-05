@@ -44,7 +44,7 @@ func is_pressed(key):
 func just_pressed(key):
 	return key in state and state[key] and not (key in prev_state and prev_state[key])
 
-func process_input_event(ev_str):
+func process_input_event(ev_str: String):
 	if !is_replay:
 		replay_log.inputs.push_back([time,ev_str])
 	if ev_str[0] == '+':
@@ -55,7 +55,7 @@ func process_input_event(ev_str):
 		else:
 			state[ev_str.substr(1)] = false
 	if ev_str[0] == '@':
-		match ev_str.substr(1):
+		match ev_str.substr(1).split("|", true, 1)[0]:
 			"hp":
 				health += 1
 				if !is_replay:
@@ -64,6 +64,9 @@ func process_input_event(ev_str):
 				damage += 1
 				if !is_replay:
 					$"/root/Game".player_extra_dmg += 1
+			"teleport":
+				var parts = ev_str.split("|")
+				position = Vector2(float(parts[1]), float(parts[2]))
 		
 func hurt(hp):
 	health -= hp
@@ -184,3 +187,6 @@ func learn_hp(x):
 
 func learn_dmg(x):
 	process_input_event("@dmg")
+
+func teleport(destination):
+	process_input_event("@teleport" + "|" + str(destination.x) + "|" + str(destination.y))

@@ -18,7 +18,14 @@ var is_muted = false
 func _ready():
 	$UI/AnimationPlayer.play("Transition")
 	$UI/AnimationPlayer.seek(1.0)
+	#$"/root/Game/Player".learn_hp(1)
+	#$"/root/Game/Player".learn_hp(1)
+	#$"/root/Game/Player".learn_dmg(1)
+	#$"/root/Game".limit = 60
 	restart()
+
+#func _enter_tree():
+#	load_level("res://scn/lvl/Level3.tscn")
 
 func restart():
 	score += limit
