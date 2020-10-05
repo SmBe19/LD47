@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://scn/env/Flower1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scn/env/Pond.tscn" type="PackedScene" id=2]
@@ -27,6 +27,13 @@
 [ext_resource path="res://scn/env/Vwkafer.tscn" type="PackedScene" id=25]
 [ext_resource path="res://scn/Item.tscn" type="PackedScene" id=26]
 [ext_resource path="res://scn/env/BearSign.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scn/env/KeepOutSign.tscn" type="PackedScene" id=28]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1893.97, 47.3174 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 38.5256, 1455.87 )
 
 [node name="LevelTut" type="YSort"]
 
@@ -256,7 +263,16 @@ position = Vector2( -9.89221, 112.505 )
 position = Vector2( -403.056, 152.66 )
 
 [node name="Tree1" parent="Env" instance=ExtResource( 9 )]
-position = Vector2( 216.762, 328.519 )
+position = Vector2( 302.192, 360.555 )
+
+[node name="Grass1" parent="Env/Tree1" instance=ExtResource( 13 )]
+position = Vector2( -100.96, -160.864 )
+
+[node name="Grass2" parent="Env/Tree1" instance=ExtResource( 15 )]
+position = Vector2( -132.996, -406.475 )
+
+[node name="Grass3" parent="Env/Tree1" instance=ExtResource( 6 )]
+position = Vector2( -165.033, -14.0319 )
 
 [node name="Shroom" parent="Env" instance=ExtResource( 4 )]
 position = Vector2( 46.9105, -212.785 )
@@ -294,3 +310,174 @@ position = Vector2( 815.83, 221.136 )
 [node name="Item" parent="Env" instance=ExtResource( 26 )]
 position = Vector2( 979.282, -1302.83 )
 type = 3
+
+[node name="Grass41" parent="Env" instance=ExtResource( 7 )]
+position = Vector2( -749.479, -384.697 )
+
+[node name="Grass42" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -764.462, 94.7614 )
+
+[node name="Grass43" parent="Env" instance=ExtResource( 11 )]
+position = Vector2( -668.571, 328.497 )
+
+[node name="Grass44" parent="Env" instance=ExtResource( 5 )]
+position = Vector2( -809.412, 628.159 )
+
+[node name="Grass45" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -464.801, 792.973 )
+
+[node name="Grass46" parent="Env" instance=ExtResource( 15 )]
+position = Vector2( -764.462, 960.783 )
+
+[node name="Grass47" parent="Env" instance=ExtResource( 13 )]
+position = Vector2( -611.635, 1161.56 )
+
+[node name="Grass48" parent="Env" instance=ExtResource( 15 )]
+position = Vector2( -792.811, -858.162 )
+
+[node name="Grass49" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -825.774, -1205.77 )
+
+[node name="Grass50" parent="Env" instance=ExtResource( 13 )]
+position = Vector2( 2296.79, -1352.6 )
+
+[node name="Grass51" parent="Env" instance=ExtResource( 15 )]
+position = Vector2( 2329.75, -1005 )
+
+[node name="Grass52" parent="Env" instance=ExtResource( 5 )]
+position = Vector2( 2398.67, -690.352 )
+
+[node name="Grass53" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( 2075.04, -1205.77 )
+
+[node name="Grass54" parent="Env" instance=ExtResource( 5 )]
+position = Vector2( 1997.12, -252.846 )
+
+[node name="Grass55" parent="Env" instance=ExtResource( 7 )]
+position = Vector2( 2368.7, 996.742 )
+
+[node name="Grass56" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 2458.6, 187.656 )
+
+[node name="Grass57" parent="Env" instance=ExtResource( 11 )]
+position = Vector2( 1277.94, -237.863 )
+
+[node name="Grass58" parent="Env" instance=ExtResource( 7 )]
+position = Vector2( 1095.14, -1031.97 )
+
+[node name="Flower16" parent="Env" instance=ExtResource( 3 )]
+position = Vector2( -720.998, -101.967 )
+
+[node name="Flower17" parent="Env" instance=ExtResource( 1 )]
+position = Vector2( -694.059, -1269.33 )
+
+[node name="Flower18" parent="Env" instance=ExtResource( 1 )]
+position = Vector2( -617.731, 629.879 )
+
+[node name="Flower19" parent="Env" instance=ExtResource( 3 )]
+position = Vector2( 2430.88, -339.929 )
+
+[node name="Flower20" parent="Env" instance=ExtResource( 8 )]
+position = Vector2( 2188.42, 1227.03 )
+
+[node name="Flower21" parent="Env" instance=ExtResource( 3 )]
+position = Vector2( 2354.55, -70.5378 )
+
+[node name="Flower22" parent="Env" instance=ExtResource( 1 )]
+position = Vector2( 1438.62, -667.688 )
+
+[node name="Flower23" parent="Env" instance=ExtResource( 3 )]
+position = Vector2( 2385.98, -1184.02 )
+
+[node name="Flower24" parent="Env" instance=ExtResource( 8 )]
+position = Vector2( 1878.62, -1363.61 )
+
+[node name="Flower25" parent="Env" instance=ExtResource( 1 )]
+position = Vector2( 1685.56, 149.465 )
+
+[node name="Flower26" parent="Env" instance=ExtResource( 3 )]
+position = Vector2( 1371.27, 607.429 )
+
+[node name="Flower27" parent="Env" instance=ExtResource( 8 )]
+position = Vector2( 1214.13, 86.6069 )
+
+[node name="Flower28" parent="Env" instance=ExtResource( 1 )]
+position = Vector2( -806.305, -604.83 )
+
+[node name="Flower29" parent="Env" instance=ExtResource( 3 )]
+position = Vector2( 607.633, -1305.53 )
+
+[node name="border" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border"]
+position = Vector2( 786.303, -1544.32 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="border"]
+position = Vector2( 786.303, 1357.65 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="border"]
+position = Vector2( -1069.15, -84.8523 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="border"]
+position = Vector2( 2641.75, -84.8523 )
+shape = SubResource( 2 )
+
+[node name="KeepOutSign" parent="border" instance=ExtResource( 28 )]
+position = Vector2( -1070.13, -1219.92 )
+
+[node name="KeepOutSign2" parent="border" instance=ExtResource( 28 )]
+position = Vector2( -1074.37, -613.905 )
+
+[node name="KeepOutSign3" parent="border" instance=ExtResource( 28 )]
+position = Vector2( -1074.37, -113.839 )
+
+[node name="KeepOutSign4" parent="border" instance=ExtResource( 28 )]
+position = Vector2( -1070.13, 598.12 )
+
+[node name="KeepOutSign5" parent="border" instance=ExtResource( 28 )]
+position = Vector2( -1070.13, 1203.31 )
+
+[node name="KeepOutSign6" parent="border" instance=ExtResource( 28 )]
+position = Vector2( -349.7, 1338.92 )
+
+[node name="KeepOutSign7" parent="border" instance=ExtResource( 28 )]
+position = Vector2( 366.497, 1334.68 )
+
+[node name="KeepOutSign8" parent="border" instance=ExtResource( 28 )]
+position = Vector2( 1120.83, 1338.92 )
+
+[node name="KeepOutSign9" parent="border" instance=ExtResource( 28 )]
+position = Vector2( 1788.38, 1313.49 )
+
+[node name="KeepOutSign10" parent="border" instance=ExtResource( 28 )]
+position = Vector2( 2500.34, 1326.21 )
+
+[node name="KeepOutSign11" parent="border" instance=ExtResource( 28 )]
+position = Vector2( 2635.95, 639.673 )
+
+[node name="KeepOutSign12" parent="border" instance=ExtResource( 28 )]
+position = Vector2( 2656.9, -55.3336 )
+
+[node name="KeepOutSign13" parent="border" instance=ExtResource( 28 )]
+position = Vector2( 2644.18, -733.39 )
+
+[node name="KeepOutSign14" parent="border" instance=ExtResource( 28 )]
+position = Vector2( 2652.66, -1424.16 )
+
+[node name="KeepOutSign15" parent="border" instance=ExtResource( 28 )]
+position = Vector2( 2084.54, -1568.25 )
+
+[node name="KeepOutSign16" parent="border" instance=ExtResource( 28 )]
+position = Vector2( 1317.49, -1576.72 )
+
+[node name="KeepOutSign17" parent="border" instance=ExtResource( 28 )]
+position = Vector2( 482.635, -1564.01 )
+
+[node name="KeepOutSign18" parent="border" instance=ExtResource( 28 )]
+position = Vector2( -161.519, -1568.25 )
+
+[node name="KeepOutSign19" parent="border" instance=ExtResource( 28 )]
+position = Vector2( -776.008, -1572.48 )

@@ -4,7 +4,7 @@ var player_scene = preload("res://scn/Player.tscn")
 
 
 var time = 0
-var limit = 20
+var limit = 15
 
 var score = 0
 

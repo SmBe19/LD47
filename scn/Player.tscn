@@ -73,7 +73,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 22.64, 13.4786 )
+extents = Vector2( 15.924, 11.2603 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_layer = 2
@@ -88,7 +88,7 @@ frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -7.605, -8.39893 )
+position = Vector2( -6.0158, -4.69083 )
 shape = SubResource( 2 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]

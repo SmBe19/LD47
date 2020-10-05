@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://scn/enemy/Bear.tscn" type="PackedScene" id=1]
 [ext_resource path="res://img/env/stalactite2.png" type="Texture" id=2]
@@ -36,6 +36,7 @@
 [ext_resource path="res://scn/env/Cave.tscn" type="PackedScene" id=34]
 [ext_resource path="res://img/enemy/cobold.png" type="Texture" id=35]
 [ext_resource path="res://img/enemy/cobold_attack.png" type="Texture" id=36]
+[ext_resource path="res://scn/env/KeepOutSign.tscn" type="PackedScene" id=37]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1320.06, 39.0452 )
@@ -690,7 +691,37 @@ position = Vector2( 466.327, 391.753 )
 position = Vector2( -98.7878, 36.1752 )
 
 [node name="Flower30" parent="Spiders/env" instance=ExtResource( 26 )]
-position = Vector2( 634.591, -52.7193 )
+position = Vector2( 654.591, -106.719 )
+
+[node name="KeepOutSign" parent="Spiders/env/Flower30" instance=ExtResource( 37 )]
+position = Vector2( -1753.85, 1088.98 )
+
+[node name="KeepOutSign2" parent="Spiders/env/Flower30" instance=ExtResource( 37 )]
+position = Vector2( 600.663, 1539.7 )
+
+[node name="KeepOutSign3" parent="Spiders/env/Flower30" instance=ExtResource( 37 )]
+position = Vector2( -1901.84, -599.542 )
+
+[node name="KeepOutSign4" parent="Spiders/env/Flower30" instance=ExtResource( 37 )]
+position = Vector2( 398.848, -969.536 )
+
+[node name="KeepOutSign5" parent="Spiders/env/Flower30" instance=ExtResource( 37 )]
+position = Vector2( 1414.65, -794.63 )
+
+[node name="KeepOutSign6" parent="Spiders/env/Flower30" instance=ExtResource( 37 )]
+position = Vector2( 3298.26, -1130.99 )
+
+[node name="KeepOutSign7" parent="Spiders/env/Flower30" instance=ExtResource( 37 )]
+position = Vector2( 4515.88, -357.363 )
+
+[node name="KeepOutSign8" parent="Spiders/env/Flower30" instance=ExtResource( 37 )]
+position = Vector2( 5161.69, 584.44 )
+
+[node name="KeepOutSign9" parent="Spiders/env/Flower30" instance=ExtResource( 37 )]
+position = Vector2( 4058.43, 1647.33 )
+
+[node name="KeepOutSign10" parent="Spiders/env/Flower30" instance=ExtResource( 37 )]
+position = Vector2( 1973.01, 1802.06 )
 
 [node name="Flower31" parent="Spiders/env" instance=ExtResource( 18 )]
 position = Vector2( 1012.39, -132.089 )

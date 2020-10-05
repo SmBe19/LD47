@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scn/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Game.gd" type="Script" id=2]
-[ext_resource path="res://scn/lvl/LevelTest.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scn/lvl/LevelTut.tscn" type="PackedScene" id=3]
 [ext_resource path="res://img/ui/mute_off.png" type="Texture" id=4]
 [ext_resource path="res://msc/EnchantedMeadow.ogg" type="AudioStream" id=5]
 [ext_resource path="res://img/ui/heart.png" type="Texture" id=6]

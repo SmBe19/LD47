@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://scn/env/Tree1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scn/env/Rock1.tscn" type="PackedScene" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://scn/env/Vwkafer.tscn" type="PackedScene" id=28]
 [ext_resource path="res://img/enemy/cobold.png" type="Texture" id=29]
 [ext_resource path="res://img/enemy/cobold_attack.png" type="Texture" id=30]
+[ext_resource path="res://scn/env/KeepOutSign.tscn" type="PackedScene" id=31]
 
 [node name="LevelTest" type="YSort"]
 
@@ -1558,6 +1559,54 @@ type = 3
 [node name="Item32" parent="Env" instance=ExtResource( 12 )]
 position = Vector2( -594.092, 215.219 )
 type = 3
+
+[node name="KeepOutSign" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( -1319.81, -1700.08 )
+
+[node name="KeepOutSign2" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( -3040.55, -884.156 )
+
+[node name="KeepOutSign3" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( 1134.33, -1946.37 )
+
+[node name="KeepOutSign4" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( 2878.68, -2238.67 )
+
+[node name="KeepOutSign5" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( 4375.46, -1366.81 )
+
+[node name="KeepOutSign6" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( 4531.69, -258.078 )
+
+[node name="KeepOutSign7" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( 4042.84, 795.216 )
+
+[node name="KeepOutSign8" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( 4037.8, 2115.61 )
+
+[node name="KeepOutSign9" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( 2490.62, 2478.47 )
+
+[node name="KeepOutSign10" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( 182.446, 2119.08 )
+
+[node name="KeepOutSign11" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( -744.856, 2527.3 )
+
+[node name="KeepOutSign12" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( -2070.91, 2471.86 )
+
+[node name="KeepOutSign13" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( -3088.93, 2265.23 )
+
+[node name="KeepOutSign14" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( -3759.21, 1584.87 )
+
+[node name="KeepOutSign15" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( -4041.3, 450.946 )
+
+[node name="KeepOutSign16" parent="Env" instance=ExtResource( 31 )]
+position = Vector2( -34.6133, -1993.3 )
 
 [node name="enemy" type="YSort" parent="."]
 
