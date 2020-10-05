@@ -16,8 +16,10 @@ var player_extra_dmg = 0
 func _ready():
 	$UI/AnimationPlayer.play("Transition")
 	$UI/AnimationPlayer.seek(1.0)
-	_on_mute_toggled($UI/Mute.pressed)
 	restart()
+
+func _enter_tree():
+	load_level("res://scn/lvl/LevelTest.tscn")
 
 func restart():
 	score += limit
@@ -78,8 +80,9 @@ func _process(delta):
 	$UI/ProgressBar.value = 1 - time / limit
 	$UI/Label.text = "%.1f s" % (limit-time)
 	if time > limit - 1:
+		if not $TransitionPlayer.playing:
+			$TransitionPlayer.play()
 		$UI/AnimationPlayer.play("Transition")
-		play_at("timeloop", Vector2(NAN, NAN))
 	$UI/HealthDisplay.region_rect.size.x = 64 * max(0, $Player.health)
 	if time > limit:
 		ghosts.append($Player.replay_log)
@@ -109,7 +112,7 @@ func _process(delta):
 	$UI/CrystalIndicators.indicators = indicators
 
 
-func load_level(level):
+func load_level(level: String):
 	score += time
 	if level == null || $UI/AnimationPlayer.is_playing():
 		# TODO: final level
@@ -118,6 +121,8 @@ func load_level(level):
 	yield(get_tree().create_timer(1), "timeout")
 	remove_child($Level)
 	var instance = load(level).instance()
+	if level.ends_with("Level3.tscn"):
+		play_music("res://msc/CursedMeadow.ogg", false)
 	instance.set_name("Level")
 	add_child(instance)
 	ghosts = []
@@ -158,6 +163,7 @@ func play_at(sound, position: Vector2):
 	else:
 		soundplayer = AudioStreamPlayer2D.new()
 		soundplayer.position = position
+	soundplayer.bus = "Effects"
 	if sound is String:
 		soundplayer.stream = Sounds.Get(sound)
 	elif sound is AudioStream:
@@ -172,4 +178,6 @@ func _on_mute_toggled(button_pressed):
 	else:
 		$MusicPlayer.stream_paused = false
 
-
+func _on_MusicPlayer_finished():
+	$MusicPlayer.disconnect("finished", self, "_on_MusicPlayer_finished")
+	play_music("res://msc/EnchantedMeadow.ogg", false)
