@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://img/env/rock3.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 111.994, 46.873 )
+
+[node name="Rock3" type="StaticBody2D"]
+
+[node name="rock3" type="Sprite" parent="."]
+position = Vector2( 0, -58.7826 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 7.93707, -24.633 )
+shape = SubResource( 1 )
