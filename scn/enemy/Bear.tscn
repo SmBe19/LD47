@@ -74,7 +74,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 84.032, 140.46 )
+extents = Vector2( 63.2304, 140.46 )
 
 [node name="Bear" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -99,5 +99,5 @@ anims/stand = SubResource( 5 )
 [node name="DamageArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
-position = Vector2( -128, -44.3372 )
+position = Vector2( -121.643, -44.3372 )
 shape = SubResource( 6 )
