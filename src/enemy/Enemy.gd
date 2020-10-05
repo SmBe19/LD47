@@ -22,18 +22,27 @@ export(bool) var has_crystal = false
 func _ready():
 	initial_position = position
 	initial_health = health
+	collision_mask = 1
+	collision_layer = 1
 
 func on_reset():
 	position = initial_position
 	health = initial_health
 	attack_time = INF
+	collision_layer = 1
+	collision_mask = 1
+	show()
 
 
 func die():
 	var old_position = position
 
 	get_tree().root.get_child(0).play_at("enemydeath", position)
-	self.position = Vector2(NAN,NAN)
+	#self.position = Vector2(NAN,NAN)
+	collision_layer = 0
+	collision_mask = 0
+	hide()
+	
 	
 	if has_crystal:
 		has_crystal = false

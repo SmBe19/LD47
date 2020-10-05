@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://img/enemy/bee0001.png" type="Texture" id=1]
+[ext_resource path="res://src/enemy/Bee.gd" type="Script" id=2]
+[ext_resource path="res://img/enemy/bee0000.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "walk",
+"speed": 20.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 84.9488, 41.4717 )
+
+[node name="Bee" type="KinematicBody2D"]
+script = ExtResource( 2 )
+damage = 4.0
+health = 2.0
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "walk"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -9.5244, 0 )
+shape = SubResource( 2 )

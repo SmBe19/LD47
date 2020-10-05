@@ -34,5 +34,6 @@ func _on_body_entered(body):
 			$"/root/Game".play_at("portalactivate", position)
 			get_tree().root.get_child(0).load_level(target_level)
 	if body is Item:
-		set_crystal_count(crystal_count + 1)
-		body.get_parent().remove_child(body)
+		if body.type == Item.ItemType.Crystal:
+			set_crystal_count(crystal_count + 1)
+			body.get_parent().remove_child(body)

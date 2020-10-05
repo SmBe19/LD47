@@ -107,6 +107,11 @@ attack={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Common"
+2d_physics/layer_2="Player"
+
 [physics]
 
 2d/default_gravity=0

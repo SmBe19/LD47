@@ -6,7 +6,7 @@
 [ext_resource path="res://img/enemy/ant0001.png" type="Texture" id=4]
 [ext_resource path="res://img/enemy/ant0002.png" type="Texture" id=5]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 1 ) ],
 "loop": true,
@@ -14,17 +14,18 @@ animations = [ {
 "speed": 8.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 84.9488, 41.4717 )
 
 [node name="Ant" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "walk"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -9.5244, 0 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )

@@ -180,7 +180,6 @@ func _on_frame_changed():
 
 func learn_hp(x):
 	process_input_event("@hp")
-	
 
 func learn_dmg(x):
 	process_input_event("@dmg")

@@ -2,7 +2,6 @@ extends Enemy
 
 
 func _ready():
-	health = 3
 	._ready()
 
 func attack():
