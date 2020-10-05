@@ -8,7 +8,7 @@ script/source = "extends Bom
 "
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 86.6623
+radius = 74.1489
 
 [node name="Shroom" type="StaticBody2D"]
 script = SubResource( 1 )

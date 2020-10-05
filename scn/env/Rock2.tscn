@@ -3,7 +3,7 @@
 [ext_resource path="res://img/env/rock2.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 104.057, 42.0643 )
+extents = Vector2( 96.3008, 42.0643 )
 
 [node name="Rock2" type="StaticBody2D"]
 
