@@ -11,19 +11,19 @@ var score = 0
 var ghosts = []
 
 var player_extra_hp = 0
-var player_extra_dmg = 1337
+var player_extra_dmg = 0
+var transition_playing = false
+var is_muted = false
 
 func _ready():
 	$UI/AnimationPlayer.play("Transition")
 	$UI/AnimationPlayer.seek(1.0)
 	restart()
 
-func _enter_tree():
-	load_level("res://scn/lvl/LevelTest.tscn")
-
 func restart():
 	score += limit
 	
+	transition_playing = false
 	time = 0
 	for ghost in $Ghosts.get_children():
 		$Ghosts.remove_child(ghost)
@@ -80,11 +80,12 @@ func _process(delta):
 	$UI/ProgressBar.value = 1 - time / limit
 	$UI/Label.text = "%.1f s" % (limit-time)
 	if time > limit - 1:
-		if not $TransitionPlayer.playing:
+		if not transition_playing:
 			$TransitionPlayer.play()
-		if $UI/AnimationPlayer.is_playing():
-			$UI/AnimationPlayer.seek($UI/AnimationPlayer.current_animation_length, true)
-		$UI/AnimationPlayer.play("Transition")
+			if $UI/AnimationPlayer.is_playing():
+				$UI/AnimationPlayer.seek($UI/AnimationPlayer.current_animation_length, true)
+			$UI/AnimationPlayer.play("Transition")
+			transition_playing = true
 	$UI/HealthDisplay.region_rect.size.x = 64 * max(0, $Player.health)
 	if time > limit:
 		ghosts.append($Player.replay_log)
@@ -157,6 +158,8 @@ func play_music(track_name, keep_position = false):
 		playback_pos = $MusicPlayer.get_playback_position()
 	$MusicPlayer.stream = load(track_name)
 	$MusicPlayer.play(playback_pos)
+	if is_muted:
+		$MusicPlayer.stream_paused = true
 
 func play_at(sound, position: Vector2):
 	var soundplayer = null
@@ -177,8 +180,10 @@ func play_at(sound, position: Vector2):
 func _on_mute_toggled(button_pressed):
 	if button_pressed:
 		$MusicPlayer.stream_paused = true
+		is_muted = true
 	else:
 		$MusicPlayer.stream_paused = false
+		is_muted = false
 
 func _on_MusicPlayer_finished():
 	$MusicPlayer.disconnect("finished", self, "_on_MusicPlayer_finished")

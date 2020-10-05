@@ -9,6 +9,7 @@ var mirror = false
 
 var target  = null
 export(float) var aggression_distance = 512
+export(float) var aggression_distance_replay = 712
 export(float) var speed = 100
 
 export(float) var attack_speed = 1
@@ -63,17 +64,23 @@ func hurt(damage):
 		die()
 
 func find_target():
-	if !is_instance_valid(target):
+	if target != null && !is_instance_valid(target):
 		target = null
 	if target != null:
 		if target.get_tree() == null:
 			target = null
 	if target == null:
 		for player in get_tree().root.get_child(0).get_players():
-			if player.position.distance_to(position) < aggression_distance:
+			var distance = aggression_distance
+			if player.is_replay:
+				distance = aggression_distance_replay
+			if player.position.distance_to(position) < distance:
 				target = player
 				break
 	else:
+		var distance = aggression_distance
+		if target.is_replay:
+			distance = aggression_distance_replay
 		if target.position.distance_to(position) > aggression_distance:
 			target = null
 

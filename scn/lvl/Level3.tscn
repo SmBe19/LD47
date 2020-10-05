@@ -47,7 +47,7 @@ extents = Vector2( 34.3608, 220.987 )
 [node name="LevelTest" type="YSort"]
 
 [node name="SpawnPoint" type="Node2D" parent="."]
-position = Vector2( 3461.67, 349.338 )
+position = Vector2( 12.9697, 23.4953 )
 
 [node name="Cave" type="YSort" parent="."]
 position = Vector2( 1516.49, 5449.42 )

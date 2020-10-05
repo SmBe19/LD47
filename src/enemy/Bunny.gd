@@ -13,7 +13,7 @@ var reset_queued = false
 var death_queued = false
 
 var jumping = false
-var jump_starting_pos : Vector2 
+var jump_starting_pos : Vector2
 var jump_target_offset : Vector2 = Vector2.ZERO
 
 var on_fire = false
@@ -24,7 +24,6 @@ func on_reset():
 	on_fire = false
 	jumping = false
 	jump_target_offset = Vector2.ZERO
-	print("queued reset!")
 
 func hurt(hp):
 	self.modulate.g = 0.5
@@ -32,7 +31,7 @@ func hurt(hp):
 	yield(get_tree().create_timer(0.1), "timeout")
 	self.modulate.g = 1.0
 	self.modulate.b = 1.0
-	
+
 	if on_fire:
 		var players = $"/root/Game".get_players()
 		var closest = players[0]
@@ -45,7 +44,7 @@ func hurt(hp):
 		meat.type = Item.ItemType.Meat
 		meat.position = position
 		get_parent().add_child(meat)
-	
+
 	death_queued = true
 	jumping = false
 	jump_target_offset = Vector2.ZERO
@@ -72,4 +71,3 @@ func jump():
 	jump_starting_pos = position
 	jump_target_offset =  Vector2(rand_range(-100,100), rand_range(-100, 100))
 	$AnimationPlayer.playback_speed = 1
-

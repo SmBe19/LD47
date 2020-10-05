@@ -611,59 +611,59 @@ shape = SubResource( 2 )
 [node name="left2" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, -1055.04 )
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 flip_h = true
 
 [node name="left3" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, -799.042 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 flip_h = true
 
 [node name="left4" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, -543.042 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 flip_h = true
 
 [node name="left5" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, -287.042 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left6" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, -31.0692 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 flip_h = true
 
 [node name="left7" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, 224.931 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 flip_h = true
 
 [node name="left8" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, 480.931 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left9" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, 736.931 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left10" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, 992.931 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 flip_h = true
 
@@ -673,111 +673,115 @@ rotation = -1.57079
 [node name="left2" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -1792.72 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 flip_h = true
 
 [node name="left3" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -1536.72 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 flip_h = true
 
 [node name="left4" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -1280.72 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left5" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -1024.72 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left6" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -768.748 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left7" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -512.748 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left8" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -256.748 )
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 flip_h = true
 
 [node name="left9" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -0.747803 )
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 flip_h = true
 
 [node name="left10" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 255.251 )
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 flip_h = true
 
 [node name="left11" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 511.274 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 flip_h = true
 
 [node name="left12" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 767.274 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 flip_h = true
 
 [node name="left13" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 1023.27 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left14" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 1279.27 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left15" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 1535.25 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left16" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 1791.25 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left17" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 2047.25 )
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 flip_h = true
 
 [node name="left18" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 2303.25 )
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 flip_h = true
 
@@ -787,95 +791,99 @@ rotation = -1.57079
 [node name="left2" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -1792.73 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="left3" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -1536.73 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="left4" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -1280.73 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="left5" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -1024.73 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="left6" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -768.754 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="left7" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -512.754 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="left8" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -256.754 )
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="left9" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -0.753418 )
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="left10" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 255.246 )
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="left11" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 511.269 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="left12" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 767.269 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="left13" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 1023.27 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="left14" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 1279.27 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="left15" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 1535.24 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="left16" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 1791.24 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="left17" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 2047.24 )
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="left18" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 2303.24 )
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="rightSprite" type="Node2D" parent="border"]
@@ -883,75 +891,77 @@ playing = true
 [node name="left2" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, -1052.47 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="left3" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, -796.474 )
 frames = SubResource( 3 )
-frame = 1
 playing = true
 
 [node name="left4" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, -540.474 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="left5" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, -284.474 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="left6" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, -28.5009 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="left7" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, 227.499 )
 frames = SubResource( 3 )
+frame = 2
 playing = true
 
 [node name="left8" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, 483.499 )
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="left9" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, 739.499 )
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="left10" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, 995.499 )
 frames = SubResource( 3 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="corner1" type="AnimatedSprite" parent="border"]
 position = Vector2( 2559.22, -1308.9 )
 frames = SubResource( 4 )
-frame = 1
 playing = true
 
 [node name="corner2" type="AnimatedSprite" parent="border"]
 position = Vector2( 2558.71, 1251.42 )
 rotation = 1.57079
 frames = SubResource( 4 )
+frame = 2
 playing = true
 
 [node name="corner3" type="AnimatedSprite" parent="border"]
 position = Vector2( -2048.61, 1248.86 )
 rotation = 3.14159
 frames = SubResource( 4 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="corner4" type="AnimatedSprite" parent="border"]
 position = Vector2( -2047.14, -1309.85 )
 rotation = 4.71238
 frames = SubResource( 4 )
-frame = 2
+frame = 1
 playing = true

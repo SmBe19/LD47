@@ -36,7 +36,6 @@ func _physics_process(delta):
 	if time > idle_time + stand_time + attack_time2:
 		time = 0
 		idle_time = rng.randf_range(1, 5)
-		print("idle_time = ", idle_time)
 		$AnimationPlayer.play("idle")
 	elif time > idle_time + stand_time:
 		$AnimationPlayer.play("attack")
