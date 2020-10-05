@@ -78,6 +78,10 @@ config/name="LD47"
 run/main_scene="res://scn/Game.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://src/Globals.gd"
+
 [global]
 
 gravity=false

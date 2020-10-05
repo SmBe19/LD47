@@ -142,22 +142,10 @@ func load_level(level: String):
 
 func finish():
 	score += time
-	print("score = ", score)
-	get_highscore()
-	submit_highscore("test", int(score*10))
+	Globals.score = score
+	get_tree().change_scene("res://scn/Hiscores.tscn")
+	
 
-func get_highscore():
-	$HTTPRequestGetHS.request("https://ludumdare.games.smeanox.com/LD47/hs/get.php")
-
-func _get_highscore_response(result, response_code, headers, body):
-	var json = JSON.parse(body.get_string_from_utf8())
-	print("highscore = ", json.result)
-
-func submit_highscore(username: String, score: int):
-	var scorestr = str(score) + "|" + username
-	var pre_magic = Secret.secret + "|" + str(len(scorestr)) + "|" + scorestr
-	var magic = pre_magic.md5_text()
-	$HTTPRequestSubmitHS.request("https://ludumdare.games.smeanox.com/LD47/hs/submit.php?username=" + username.percent_encode() + "&score=" + str(score) + "&magic=" + magic)
 
 func play_music(track_name, keep_position = false):
 	var playback_pos = 0

@@ -78,7 +78,7 @@ func hurt(hp):
 		self.modulate.g = 1.0
 		self.modulate.b = 1.0
 	else:
-		get_tree().root.get_child(0).player_hurt()
+		$"/root/Game".player_hurt()
 	
 	if health <= 0:
 		if is_replay:
@@ -87,7 +87,7 @@ func hurt(hp):
 		else:
 			# end this iteration
 			process_input_event("-*") # release all keys
-			var game = get_tree().root.get_child(0)
+			var game = $"/root/Game"
 			if game.time < game.limit - 1:
 				game.time = game.limit - 1
 

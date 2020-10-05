@@ -215,10 +215,10 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="UI/Transition"]
-margin_left = -510.413
-margin_top = -512.0
-margin_right = 1537.59
-margin_bottom = 1536.0
+margin_left = -511.074
+margin_top = -521.39
+margin_right = 1536.93
+margin_bottom = 1526.61
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false

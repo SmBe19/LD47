@@ -38,7 +38,7 @@ func on_reset():
 func die():
 	var old_position = position
 
-	get_tree().root.get_child(0).play_at("enemydeath", position)
+	$"/root/Game".play_at("enemydeath", position)
 	#self.position = Vector2(NAN,NAN)
 	collision_layer = 0
 	collision_mask = 0
@@ -70,7 +70,7 @@ func find_target():
 		if target.get_tree() == null:
 			target = null
 	if target == null:
-		for player in get_tree().root.get_child(0).get_players():
+		for player in $"/root/Game/".get_players():
 			var distance = aggression_distance
 			if player.is_replay:
 				distance = aggression_distance_replay

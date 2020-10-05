@@ -28,7 +28,7 @@ func die():
 	$AnimationPlayer.play("explode")
 
 func finish_game():
-	var game = get_tree().root.get_child(0)
+	var game = $"/root/Game"
 	game.finish()
 
 func _physics_process(delta):

@@ -35,8 +35,8 @@ func _on_body_entered(body):
 	if body is Player:
 		if active and !body.is_replay:
 			$"/root/Game".play_at("portalactivate", position)
-			get_tree().root.get_child(0).limit += 15
-			get_tree().root.get_child(0).load_level(target_level)
+			$"/root/Game".limit += 15
+			$"/root/Game".load_level(target_level)
 	if body is Item:
 		if body.type == Item.ItemType.Crystal:
 			set_crystal_count(crystal_count + 1)
