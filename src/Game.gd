@@ -17,7 +17,7 @@ func _ready():
 	$UI/AnimationPlayer.play("Transition")
 	$UI/AnimationPlayer.seek(1.0)
 	_on_mute_toggled($UI/Mute.pressed)
-	pass
+	restart()
 
 func restart():
 	score += limit
@@ -33,6 +33,16 @@ func restart():
 	player.health += player_extra_hp
 	player.damage += player_extra_dmg
 	add_child(player)
+	var camera = Camera2D.new()
+	camera.name = "Camera2D";
+	camera.drag_margin_left = 0.4
+	camera.drag_margin_right = 0.4
+	camera.drag_margin_top = 0.3
+	camera.drag_margin_bottom = 0.5
+	camera.drag_margin_h_enabled = true
+	camera.drag_margin_v_enabled = true
+	player.add_child(camera)
+	camera.current = true
 	
 	for x in ghosts:
 		var ghost = player_scene.instance()

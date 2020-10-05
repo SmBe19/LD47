@@ -91,14 +91,6 @@ playing = true
 position = Vector2( -7.605, -8.39893 )
 shape = SubResource( 2 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-drag_margin_left = 0.3
-drag_margin_right = 0.3
-drag_margin_bottom = 0.4
-
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2( 0, -30.5 )
 enabled = true
