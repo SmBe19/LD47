@@ -1363,6 +1363,202 @@ texture = ExtResource( 29 )
 position = Vector2( -3035.58, 1160.75 )
 texture = ExtResource( 30 )
 
+[node name="Item7" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 2544.06, -905.542 )
+type = 3
+
+[node name="Item8" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 2859.09, -729.343 )
+type = 3
+
+[node name="Item9" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 2923.16, -360.927 )
+type = 3
+
+[node name="Item10" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -3281.18, 439.977 )
+type = 3
+
+[node name="Item11" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -3019.55, 1593.28 )
+type = 3
+
+[node name="Item12" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -2832.67, 1208.84 )
+type = 3
+
+[node name="Item13" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -2410.86, 55.5428 )
+type = 3
+
+[node name="Item14" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -2709.87, 925.859 )
+type = 3
+
+[node name="Item15" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 2688.23, 140.973 )
+type = 3
+
+[node name="Item33" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -2227.58, 1487.3 )
+type = 3
+
+[node name="Item50" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -2103.13, 180.571 )
+type = 3
+
+[node name="Item51" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -2979.94, 338.963 )
+type = 3
+
+[node name="Item52" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -2979.94, 729.285 )
+type = 3
+
+[node name="Item53" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -2793.27, 734.942 )
+type = 3
+
+[node name="Item54" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -2855.49, 1074.35 )
+type = 3
+
+[node name="Item55" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -2736.7, 1577.81 )
+type = 3
+
+[node name="Item34" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 934.601, 695.344 )
+type = 3
+
+[node name="Item35" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 3417.96, -882.918 )
+type = 3
+
+[node name="Item36" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 3706.46, -605.732 )
+type = 3
+
+[node name="Item37" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 2965.41, -1171.42 )
+type = 3
+
+[node name="Item38" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 2133.85, -1652.25 )
+type = 3
+
+[node name="Item39" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 1743.53, 1000.81 )
+type = 3
+
+[node name="Item40" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 1817.07, 208.855 )
+type = 3
+
+[node name="Item41" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 3270.88, -1635.28 )
+type = 3
+
+[node name="Item42" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 2099.91, -1075.25 )
+type = 3
+
+[node name="Item43" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 2122.54, 531.296 )
+type = 3
+
+[node name="Item44" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 2320.53, -1386.38 )
+type = 3
+
+[node name="Item45" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 3519.78, -1114.85 )
+type = 3
+
+[node name="Item46" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 2676.91, -973.428 )
+type = 3
+
+[node name="Item47" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 2812.68, 633.119 )
+type = 3
+
+[node name="Item48" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 3067.24, -815.036 )
+type = 3
+
+[node name="Item49" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 2541.15, -288.948 )
+type = 3
+
+[node name="Item16" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 2373.2, 840.429 )
+type = 3
+
+[node name="Item17" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 200.084, 1385.04 )
+type = 3
+
+[node name="Item18" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 2084.88, 648.212 )
+type = 3
+
+[node name="Item19" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 659.269, -1023.01 )
+type = 3
+
+[node name="Item20" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -574.123, -782.737 )
+type = 3
+
+[node name="Item21" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -2543.5, 1986.64 )
+type = 3
+
+[node name="Item22" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -1657.79, 1969.69 )
+type = 3
+
+[node name="Item23" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -1081.45, 1973.93 )
+type = 3
+
+[node name="Item24" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 1601.12, -77.1927 )
+type = 3
+
+[node name="Item25" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( 1562.97, 575.436 )
+type = 3
+
+[node name="Item26" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -166.069, 1172.97 )
+type = 3
+
+[node name="Item27" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -3030.86, -195.853 )
+type = 3
+
+[node name="Item28" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -2323.14, -356.891 )
+type = 3
+
+[node name="Item29" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -1640.84, -467.075 )
+type = 3
+
+[node name="Item30" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -1140.78, -560.308 )
+type = 3
+
+[node name="Item31" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -238.113, -556.07 )
+type = 3
+
+[node name="Item32" parent="Env" instance=ExtResource( 12 )]
+position = Vector2( -594.092, 215.219 )
+type = 3
+
 [node name="enemy" type="YSort" parent="."]
 
 [node name="Ant" parent="enemy" instance=ExtResource( 14 )]

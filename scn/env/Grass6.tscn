@@ -2,7 +2,7 @@
 
 [ext_resource path="res://img/env/grass6.png" type="Texture" id=1]
 
-[node name="Grass6" type="StaticBody2D"]
+[node name="Grass6" type="Node2D"]
 
 [node name="grass6" type="Sprite" parent="."]
 position = Vector2( -0.594604, -33.4662 )

@@ -1,18 +1,39 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://scn/enemy/Spider.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scn/enemy/Bunny.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scn/enemy/Bee.tscn" type="PackedScene" id=3]
-[ext_resource path="res://img/env/beach_line0002.png" type="Texture" id=4]
-[ext_resource path="res://img/env/beach_line0000.png" type="Texture" id=5]
-[ext_resource path="res://img/env/beach_line0001.png" type="Texture" id=6]
+[ext_resource path="res://scn/env/Rock1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scn/env/Grass1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scn/env/Grass2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scn/env/Tree1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://img/env/beach_corner0001.png" type="Texture" id=7]
-[ext_resource path="res://img/env/beach_corner0000.png" type="Texture" id=8]
+[ext_resource path="res://scn/env/Tree2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://img/env/beach_corner0002.png" type="Texture" id=9]
 [ext_resource path="res://scn/env/Portal.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scn/env/Flower1.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scn/Item.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scn/env/Tree3.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scn/enemy/Crab.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scn/env/Grass3.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scn/env/Pond.tscn" type="PackedScene" id=16]
 [ext_resource path="res://scn/enemy/Ant.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scn/env/Flower2.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scn/enemy/Bee.tscn" type="PackedScene" id=19]
+[ext_resource path="res://img/env/beach_line0002.png" type="Texture" id=20]
+[ext_resource path="res://img/env/beach_corner0000.png" type="Texture" id=21]
+[ext_resource path="res://scn/env/BearSign.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scn/env/Rock2.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scn/env/Flower3.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scn/env/Rock4.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scn/env/Grass6.tscn" type="PackedScene" id=26]
+[ext_resource path="res://scn/env/Vwkafer.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scn/env/Shroom.tscn" type="PackedScene" id=28]
+[ext_resource path="res://scn/env/Rock3.tscn" type="PackedScene" id=29]
+[ext_resource path="res://scn/env/Grass4.tscn" type="PackedScene" id=30]
+[ext_resource path="res://scn/env/Grass5.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scn/env/Grass7.tscn" type="PackedScene" id=32]
+[ext_resource path="res://img/env/beach_line0000.png" type="Texture" id=33]
+[ext_resource path="res://img/env/beach_line0001.png" type="Texture" id=34]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2344.28, 48.8234 )
@@ -22,7 +43,7 @@ extents = Vector2( 46.1873, 1284.2 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "default",
 "speed": 2.0
@@ -30,7 +51,7 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 7 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 21 ), ExtResource( 7 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "default",
 "speed": 1.0
@@ -48,56 +69,523 @@ target_level = "res://scn/lvl/LevelTest.tscn"
 
 [node name="env" type="YSort" parent="."]
 
+[node name="BearSign" parent="env" instance=ExtResource( 22 )]
+position = Vector2( 466.569, 1160.5 )
+
+[node name="BearSign2" parent="env" instance=ExtResource( 22 )]
+position = Vector2( 558.61, -260.533 )
+
+[node name="Rock4" parent="env" instance=ExtResource( 25 )]
+position = Vector2( -235.932, 974.041 )
+
+[node name="Rock3" parent="env" instance=ExtResource( 29 )]
+position = Vector2( 405.515, 902.769 )
+
+[node name="Rock2" parent="env" instance=ExtResource( 23 )]
+position = Vector2( -114.77, 503.646 )
+
+[node name="Tree1" parent="env" instance=ExtResource( 6 )]
+position = Vector2( -399.857, 991.858 )
+
+[node name="Tree2" parent="env" instance=ExtResource( 8 )]
+position = Vector2( -431.93, 61.7602 )
+
+[node name="Tree3" parent="env" instance=ExtResource( 13 )]
+position = Vector2( 850.964, 175.795 )
+
+[node name="Rock1" parent="env" instance=ExtResource( 3 )]
+position = Vector2( 1984.19, 938.404 )
+
+[node name="VWKafer" parent="env" instance=ExtResource( 27 )]
+position = Vector2( 2155.24, 860.005 )
+
+[node name="Rock5" parent="env" instance=ExtResource( 23 )]
+position = Vector2( -1074.55, -78.0474 )
+
+[node name="Tree4" parent="env" instance=ExtResource( 6 )]
+position = Vector2( 1793.98, -81.411 )
+
+[node name="Tree5" parent="env" instance=ExtResource( 6 )]
+position = Vector2( 1962.16, 386.127 )
+
+[node name="Tree6" parent="env" instance=ExtResource( 6 )]
+position = Vector2( 2163.97, -24.2301 )
+
+[node name="Tree7" parent="env" instance=ExtResource( 13 )]
+position = Vector2( 1652.71, 103.586 )
+
+[node name="Shroom" parent="env" instance=ExtResource( 28 )]
+position = Vector2( 1992.43, -246.227 )
+
+[node name="Pond" parent="env" instance=ExtResource( 16 )]
+position = Vector2( 1678.74, 298.669 )
+
+[node name="Flower1" parent="env" instance=ExtResource( 11 )]
+position = Vector2( 1753.66, 382.574 )
+
+[node name="Flower2" parent="env" instance=ExtResource( 18 )]
+position = Vector2( 1774.63, 169.814 )
+
+[node name="Flower3" parent="env" instance=ExtResource( 18 )]
+position = Vector2( 1427.02, 241.733 )
+
+[node name="Flower4" parent="env" instance=ExtResource( 24 )]
+position = Vector2( 1445, 403.55 )
+
+[node name="Flower5" parent="env" instance=ExtResource( 11 )]
+position = Vector2( 2296.04, 166.818 )
+
+[node name="Tree8" parent="env" instance=ExtResource( 6 )]
+position = Vector2( 93.5311, 646.276 )
+
+[node name="Tree9" parent="env" instance=ExtResource( 8 )]
+position = Vector2( 659.891, 1155.7 )
+
+[node name="Flower6" parent="env" instance=ExtResource( 11 )]
+position = Vector2( -739.528, 61.936 )
+
+[node name="Flower7" parent="env" instance=ExtResource( 18 )]
+position = Vector2( -1350.84, 85.9089 )
+
+[node name="Flower8" parent="env" instance=ExtResource( 11 )]
+position = Vector2( -1380.8, -372.573 )
+
+[node name="Flower9" parent="env" instance=ExtResource( 24 )]
+position = Vector2( -910.335, -363.583 )
+
+[node name="Flower10" parent="env" instance=ExtResource( 24 )]
+position = Vector2( -751.515, 286.682 )
+
+[node name="Flower11" parent="env" instance=ExtResource( 18 )]
+position = Vector2( -1248.95, 388.567 )
+
+[node name="Flower12" parent="env" instance=ExtResource( 11 )]
+position = Vector2( -367.948, 262.709 )
+
+[node name="Flower13" parent="env" instance=ExtResource( 11 )]
+position = Vector2( -236.097, -117.861 )
+
+[node name="Flower14" parent="env" instance=ExtResource( 18 )]
+position = Vector2( -134.212, 100.892 )
+
+[node name="Flower15" parent="env" instance=ExtResource( 18 )]
+position = Vector2( -367.948, 502.438 )
+
+[node name="Flower16" parent="env" instance=ExtResource( 18 )]
+position = Vector2( -562.728, 862.032 )
+
+[node name="Grass1" parent="env" instance=ExtResource( 4 )]
+position = Vector2( -191.148, 709.205 )
+
+[node name="Grass2" parent="env" instance=ExtResource( 5 )]
+position = Vector2( 183.429, 781.124 )
+
+[node name="Grass3" parent="env" instance=ExtResource( 15 )]
+position = Vector2( -194.144, 1059.81 )
+
+[node name="Grass4" parent="env" instance=ExtResource( 30 )]
+position = Vector2( 309.287, 1032.84 )
+
+[node name="Grass5" parent="env" instance=ExtResource( 15 )]
+position = Vector2( 578.982, 685.232 )
+
+[node name="Grass6" parent="env" instance=ExtResource( 5 )]
+position = Vector2( 599.958, 532.405 )
+
+[node name="Grass7" parent="env" instance=ExtResource( 31 )]
+position = Vector2( 507.063, 400.554 )
+
+[node name="Grass8" parent="env" instance=ExtResource( 26 )]
+position = Vector2( 204.405, 397.557 )
+
+[node name="Grass9" parent="env" instance=ExtResource( 32 )]
+position = Vector2( 219.388, 607.32 )
+
+[node name="Grass10" parent="env" instance=ExtResource( 31 )]
+position = Vector2( -11.3512, 829.069 )
+
+[node name="Pond2" parent="env" instance=ExtResource( 16 )]
+position = Vector2( -865.009, -933.347 )
+
+[node name="Shroom2" parent="env" instance=ExtResource( 28 )]
+position = Vector2( -1212.62, -918.365 )
+
+[node name="Tree10" parent="env" instance=ExtResource( 6 )]
+position = Vector2( -562.753, -1064.18 )
+
+[node name="Tree11" parent="env" instance=ExtResource( 6 )]
+position = Vector2( -1705.68, -1226.09 )
+
+[node name="Tree12" parent="env" instance=ExtResource( 6 )]
+position = Vector2( -1937.44, -187.934 )
+
+[node name="Tree13" parent="env" instance=ExtResource( 6 )]
+position = Vector2( 904.006, -1156.25 )
+
+[node name="Tree14" parent="env" instance=ExtResource( 6 )]
+position = Vector2( 2454, -956.236 )
+
+[node name="Tree15" parent="env" instance=ExtResource( 6 )]
+position = Vector2( 2431.78, 405.754 )
+
+[node name="Tree16" parent="env" instance=ExtResource( 6 )]
+position = Vector2( 1470.77, -715.641 )
+
+[node name="Tree17" parent="env" instance=ExtResource( 6 )]
+position = Vector2( 1625.5, 1147.78 )
+
+[node name="Tree18" parent="env" instance=ExtResource( 6 )]
+position = Vector2( 2466.39, 1161.24 )
+
+[node name="Tree19" parent="env" instance=ExtResource( 6 )]
+position = Vector2( 68.1552, 1134.33 )
+
+[node name="Tree20" parent="env" instance=ExtResource( 6 )]
+position = Vector2( -1869.27, 1167.97 )
+
+[node name="Tree21" parent="env" instance=ExtResource( 6 )]
+position = Vector2( -1546.36, 380.887 )
+
+[node name="Tree22" parent="env" instance=ExtResource( 6 )]
+position = Vector2( -1105.73, 845.062 )
+
+[node name="Tree23" parent="env" instance=ExtResource( 8 )]
+position = Vector2( -174.021, -816.548 )
+
+[node name="Tree24" parent="env" instance=ExtResource( 8 )]
+position = Vector2( 1228.59, 629.793 )
+
+[node name="Tree25" parent="env" instance=ExtResource( 8 )]
+position = Vector2( 1289.14, -231.285 )
+
+[node name="Tree26" parent="env" instance=ExtResource( 8 )]
+position = Vector2( 2113.22, -833.367 )
+
+[node name="Tree27" parent="env" instance=ExtResource( 13 )]
+position = Vector2( 61.7351, -133.741 )
+
+[node name="Flower17" parent="env" instance=ExtResource( 11 )]
+position = Vector2( -1450.35, 778.253 )
+
+[node name="Flower18" parent="env" instance=ExtResource( 18 )]
+position = Vector2( -1694.81, 527.444 )
+
+[node name="Flower19" parent="env" instance=ExtResource( 24 )]
+position = Vector2( -805.87, 917.945 )
+
+[node name="Flower20" parent="env" instance=ExtResource( 11 )]
+position = Vector2( -1755.14, 60.7482 )
+
+[node name="Flower21" parent="env" instance=ExtResource( 18 )]
+position = Vector2( -1304.31, 1000.49 )
+
+[node name="Flower22" parent="env" instance=ExtResource( 24 )]
+position = Vector2( -1644.02, -250.382 )
+
+[node name="Flower23" parent="env" instance=ExtResource( 18 )]
+position = Vector2( -1637.67, -672.632 )
+
+[node name="Flower24" parent="env" instance=ExtResource( 11 )]
+position = Vector2( -1370.98, -882.169 )
+
+[node name="Flower25" parent="env" instance=ExtResource( 18 )]
+position = Vector2( -1710.69, -1012.34 )
+
+[node name="Flower26" parent="env" instance=ExtResource( 24 )]
+position = Vector2( -602.987, -618.437 )
+
+[node name="Flower27" parent="env" instance=ExtResource( 18 )]
+position = Vector2( -1221.89, -695.8 )
+
+[node name="Flower28" parent="env" instance=ExtResource( 11 )]
+position = Vector2( 29.3669, -759.708 )
+
+[node name="Flower29" parent="env" instance=ExtResource( 11 )]
+position = Vector2( 1141.44, -951.432 )
+
+[node name="Flower30" parent="env" instance=ExtResource( 18 )]
+position = Vector2( 724.359, -806.798 )
+
+[node name="Flower31" parent="env" instance=ExtResource( 24 )]
+position = Vector2( 589.815, -635.255 )
+
+[node name="Flower32" parent="env" instance=ExtResource( 11 )]
+position = Vector2( 1831.77, -820.984 )
+
+[node name="Flower33" parent="env" instance=ExtResource( 18 )]
+position = Vector2( 1350.68, -54.8108 )
+
+[node name="Flower34" parent="env" instance=ExtResource( 24 )]
+position = Vector2( 930.179, 454.784 )
+
+[node name="Flower35" parent="env" instance=ExtResource( 11 )]
+position = Vector2( 883.852, 661.473 )
+
+[node name="Flower36" parent="env" instance=ExtResource( 18 )]
+position = Vector2( 1528.86, 640.091 )
+
+[node name="Flower37" parent="env" instance=ExtResource( 24 )]
+position = Vector2( 1069.16, 825.398 )
+
+[node name="Flower38" parent="env" instance=ExtResource( 11 )]
+position = Vector2( 890.979, 1000.01 )
+
+[node name="Flower39" parent="env" instance=ExtResource( 18 )]
+position = Vector2( 1379.19, 900.234 )
+
+[node name="Flower40" parent="env" instance=ExtResource( 24 )]
+position = Vector2( 1935.11, 593.764 )
+
+[node name="Flower41" parent="env" instance=ExtResource( 11 )]
+position = Vector2( 2223.76, 583.074 )
+
+[node name="Flower42" parent="env" instance=ExtResource( 18 )]
+position = Vector2( 2295.04, 1074.85 )
+
+[node name="Flower43" parent="env" instance=ExtResource( 24 )]
+position = Vector2( 1204.58, 1010.7 )
+
+[node name="Flower44" parent="env" instance=ExtResource( 11 )]
+position = Vector2( 1667.84, -578.659 )
+
+[node name="Flower45" parent="env" instance=ExtResource( 18 )]
+position = Vector2( 1051.34, -279.317 )
+
+[node name="Flower46" parent="env" instance=ExtResource( 24 )]
+position = Vector2( 2230.89, -632.113 )
+
+[node name="Grass11" parent="env" instance=ExtResource( 4 )]
+position = Vector2( -1610.67, 896.669 )
+
+[node name="Grass12" parent="env" instance=ExtResource( 5 )]
+position = Vector2( -1788.84, 322.93 )
+
+[node name="Grass13" parent="env" instance=ExtResource( 15 )]
+position = Vector2( -1446.74, -600.041 )
+
+[node name="Grass14" parent="env" instance=ExtResource( 30 )]
+position = Vector2( -855.183, -649.931 )
+
+[node name="Grass15" parent="env" instance=ExtResource( 31 )]
+position = Vector2( -1756.77, -824.547 )
+
+[node name="Grass16" parent="env" instance=ExtResource( 26 )]
+position = Vector2( -659.185, -389.789 )
+
+[node name="Grass17" parent="env" instance=ExtResource( 32 )]
+position = Vector2( -566.532, 187.514 )
+
+[node name="Grass18" parent="env" instance=ExtResource( 4 )]
+position = Vector2( -894.383, 629.4 )
+
+[node name="Grass19" parent="env" instance=ExtResource( 5 )]
+position = Vector2( -1022.67, 1007.14 )
+
+[node name="Grass20" parent="env" instance=ExtResource( 15 )]
+position = Vector2( -1325.58, 575.946 )
+
+[node name="Grass21" parent="env" instance=ExtResource( 30 )]
+position = Vector2( -627.115, 975.069 )
+
+[node name="Grass22" parent="env" instance=ExtResource( 31 )]
+position = Vector2( 365.007, 137.624 )
+
+[node name="Grass23" parent="env" instance=ExtResource( 26 )]
+position = Vector2( 621.586, 194.641 )
+
+[node name="Grass24" parent="env" instance=ExtResource( 32 )]
+position = Vector2( 753.439, 540.31 )
+
+[node name="Grass25" parent="env" instance=ExtResource( 4 )]
+position = Vector2( 910.237, -428.988 )
+
+[node name="Grass26" parent="env" instance=ExtResource( 5 )]
+position = Vector2( 169.009, -585.787 )
+
+[node name="Grass27" parent="env" instance=ExtResource( 15 )]
+position = Vector2( -401.166, -899.383 )
+
+[node name="Grass28" parent="env" instance=ExtResource( 30 )]
+position = Vector2( 122.682, -1074 )
+
+[node name="Grass29" parent="env" instance=ExtResource( 31 )]
+position = Vector2( 596.64, -938.583 )
+
+[node name="Grass30" parent="env" instance=ExtResource( 26 )]
+position = Vector2( 977.945, -945.71 )
+
+[node name="Grass31" parent="env" instance=ExtResource( 32 )]
+position = Vector2( 1337.87, -874.438 )
+
+[node name="Grass32" parent="env" instance=ExtResource( 4 )]
+position = Vector2( 1822.52, -1052.62 )
+
+[node name="Grass33" parent="env" instance=ExtResource( 5 )]
+position = Vector2( 1897.35, -653.495 )
+
+[node name="Grass34" parent="env" instance=ExtResource( 15 )]
+position = Vector2( 197.518, 62.7876 )
+
+[node name="Grass35" parent="env" instance=ExtResource( 30 )]
+position = Vector2( -1227.92, 725.617 )
+
+[node name="Grass36" parent="env" instance=ExtResource( 31 )]
+position = Vector2( -682.69, 729.181 )
+
+[node name="Grass37" parent="env" instance=ExtResource( 26 )]
+position = Vector2( 778.384, 768.38 )
+
+[node name="Grass38" parent="env" instance=ExtResource( 32 )]
+position = Vector2( 1027.84, 1021.4 )
+
+[node name="Grass39" parent="env" instance=ExtResource( 4 )]
+position = Vector2( 1070.6, -65.5011 )
+
+[node name="Grass40" parent="env" instance=ExtResource( 5 )]
+position = Vector2( -144.587, -657.058 )
+
+[node name="Grass41" parent="env" instance=ExtResource( 15 )]
+position = Vector2( -1031.92, -635.677 )
+
+[node name="Grass42" parent="env" instance=ExtResource( 30 )]
+position = Vector2( -1623.48, -475.315 )
+
+[node name="Grass43" parent="env" instance=ExtResource( 31 )]
+position = Vector2( -1363.34, 294.422 )
+
+[node name="Grass44" parent="env" instance=ExtResource( 26 )]
+position = Vector2( -1477.37, 1014.27 )
+
+[node name="Item" parent="env" instance=ExtResource( 12 )]
+position = Vector2( -968.596, 334.5 )
+type = 3
+
+[node name="Item2" parent="env" instance=ExtResource( 12 )]
+position = Vector2( -1663.5, 195.52 )
+type = 3
+
+[node name="Item3" parent="env" instance=ExtResource( 12 )]
+position = Vector2( 1729.05, -709.633 )
+type = 3
+
+[node name="Item4" parent="env" instance=ExtResource( 12 )]
+position = Vector2( 1817.26, 641.354 )
+type = 3
+
+[node name="Item5" parent="env" instance=ExtResource( 12 )]
+position = Vector2( 969.588, 107.987 )
+type = 3
+
+[node name="Item6" parent="env" instance=ExtResource( 12 )]
+position = Vector2( -1551.2, 622.305 )
+type = 3
+
+[node name="Item7" parent="env" instance=ExtResource( 12 )]
+position = Vector2( -1494.06, -800.006 )
+type = 3
+
+[node name="Item8" parent="env" instance=ExtResource( 12 )]
+position = Vector2( 1207.7, -758.733 )
+type = 3
+
+[node name="Item9" parent="env" instance=ExtResource( 12 )]
+position = Vector2( -960.691, 860.415 )
+type = 3
+
+[node name="Item10" parent="env" instance=ExtResource( 12 )]
+position = Vector2( 864.82, -288.863 )
+type = 3
+
+[node name="Item11" parent="env" instance=ExtResource( 12 )]
+position = Vector2( 331.624, -688.888 )
+type = 3
+
+[node name="Item12" parent="env" instance=ExtResource( 12 )]
+position = Vector2( -1537.25, -919.193 )
+type = 3
+
+[node name="Item13" parent="env" instance=ExtResource( 12 )]
+position = Vector2( 1992.84, 1059.17 )
+type = 3
+
+[node name="Item14" parent="env" instance=ExtResource( 12 )]
+position = Vector2( 2117.43, 462.639 )
+type = 3
+
+[node name="Item15" parent="env" instance=ExtResource( 12 )]
+position = Vector2( -555.618, 677.842 )
+type = 3
+
+[node name="Item16" parent="env" instance=ExtResource( 12 )]
+position = Vector2( 1721.01, 572.128 )
+type = 3
+
+[node name="Item17" parent="env" instance=ExtResource( 12 )]
+position = Vector2( 1992.84, -919.193 )
+type = 3
+
+[node name="Item18" parent="env" instance=ExtResource( 12 )]
+position = Vector2( -487.658, -805.928 )
+type = 3
+
+[node name="Item19" parent="env" instance=ExtResource( 12 )]
+position = Vector2( 452.44, 273.864 )
+type = 3
+
+[node name="Item20" parent="env" instance=ExtResource( 12 )]
+position = Vector2( 1551.11, -409.501 )
+type = 3
+
 [node name="enemy" type="YSort" parent="."]
 
-[node name="Bee" parent="enemy" instance=ExtResource( 3 )]
-position = Vector2( 2076.41, -178.402 )
+[node name="Bee" parent="enemy" instance=ExtResource( 19 )]
+position = Vector2( 2083.54, -135.639 )
 has_crystal = true
 
-[node name="Bee2" parent="enemy" instance=ExtResource( 3 )]
-position = Vector2( 2114.47, 363.876 )
+[node name="Bee2" parent="enemy" instance=ExtResource( 19 )]
+position = Vector2( 2107.34, 228.459 )
 
 [node name="Bunny" parent="enemy" instance=ExtResource( 2 )]
-position = Vector2( 459.093, 54.6823 )
+position = Vector2( 491.166, 36.8643 )
 
 [node name="Bunny2" parent="enemy" instance=ExtResource( 2 )]
-position = Vector2( 216.495, 459.013 )
+position = Vector2( 359.039, 580.175 )
 
 [node name="Bunny3" parent="enemy" instance=ExtResource( 2 )]
-position = Vector2( -492.272, 368.633 )
+position = Vector2( -631.253, 568.194 )
 
 [node name="Bunny4" parent="enemy" instance=ExtResource( 2 )]
-position = Vector2( -240.161, -211.7 )
+position = Vector2( -329.25, -439.77 )
 
 [node name="Bunny5" parent="enemy" instance=ExtResource( 2 )]
-position = Vector2( 382.984, -682.626 )
+position = Vector2( 308.148, -821.606 )
 
 [node name="Bunny6" parent="enemy" instance=ExtResource( 2 )]
-position = Vector2( 820.612, -468.569 )
+position = Vector2( 984.537, -554.095 )
 
 [node name="Bunny7" parent="enemy" instance=ExtResource( 2 )]
-position = Vector2( 1148.83, 297.281 )
+position = Vector2( 1223.67, 250.954 )
 
 [node name="Crab" parent="enemy" instance=ExtResource( 14 )]
-position = Vector2( -189.326, 724.761 )
+position = Vector2( 60.1256, 945.704 )
 has_crystal = true
 
 [node name="Spider" parent="enemy" instance=ExtResource( 1 )]
-position = Vector2( -955.752, -26.5632 )
+position = Vector2( -1119.68, 126.671 )
 has_crystal = true
 
 [node name="Spider2" parent="enemy" instance=ExtResource( 1 )]
-position = Vector2( -917.997, -253.093 )
+position = Vector2( -1160.32, -395.637 )
 
 [node name="Ant" parent="enemy" instance=ExtResource( 17 )]
-position = Vector2( -634.835, -124.726 )
+position = Vector2( -752.433, -171.053 )
 
 [node name="Ant2" parent="enemy" instance=ExtResource( 17 )]
-position = Vector2( -1235.14, -150.483 )
+position = Vector2( -1366.99, -157.61 )
 has_crystal = true
 
 [node name="Item" parent="." instance=ExtResource( 12 )]
-position = Vector2( 1814.74, 93.5673 )
+position = Vector2( 1882.45, 61.4949 )
 type = 4
 
 [node name="border" type="StaticBody2D" parent="."]
@@ -123,6 +611,7 @@ shape = SubResource( 2 )
 [node name="left2" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, -1055.04 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -135,7 +624,6 @@ flip_h = true
 [node name="left4" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, -543.042 )
 frames = SubResource( 3 )
-frame = 2
 playing = true
 flip_h = true
 
@@ -149,35 +637,33 @@ flip_h = true
 [node name="left6" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, -31.0692 )
 frames = SubResource( 3 )
-frame = 2
 playing = true
 flip_h = true
 
 [node name="left7" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, 224.931 )
 frames = SubResource( 3 )
-frame = 2
 playing = true
 flip_h = true
 
 [node name="left8" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, 480.931 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left9" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, 736.931 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left10" type="AnimatedSprite" parent="border/leftSprite"]
 position = Vector2( -2046.95, 992.931 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
@@ -187,114 +673,115 @@ rotation = -1.57079
 [node name="left2" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -1792.72 )
 frames = SubResource( 3 )
-frame = 2
 playing = true
 flip_h = true
 
 [node name="left3" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -1536.72 )
 frames = SubResource( 3 )
-frame = 2
 playing = true
 flip_h = true
 
 [node name="left4" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -1280.72 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left5" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -1024.72 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left6" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -768.748 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left7" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -512.748 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left8" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -256.748 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 flip_h = true
 
 [node name="left9" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, -0.747803 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 flip_h = true
 
 [node name="left10" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 255.251 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 flip_h = true
 
 [node name="left11" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 511.274 )
 frames = SubResource( 3 )
-frame = 2
 playing = true
 flip_h = true
 
 [node name="left12" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 767.274 )
 frames = SubResource( 3 )
-frame = 2
 playing = true
 flip_h = true
 
 [node name="left13" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 1023.27 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left14" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 1279.27 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left15" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 1535.25 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left16" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 1791.25 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
 [node name="left17" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 2047.25 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 flip_h = true
 
 [node name="left18" type="AnimatedSprite" parent="border/bottomSprite"]
 position = Vector2( -1250.19, 2303.25 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -304,98 +791,99 @@ rotation = -1.57079
 [node name="left2" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -1792.73 )
 frames = SubResource( 3 )
-frame = 2
 playing = true
 
 [node name="left3" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -1536.73 )
 frames = SubResource( 3 )
-frame = 2
 playing = true
 
 [node name="left4" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -1280.73 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="left5" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -1024.73 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="left6" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -768.754 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="left7" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -512.754 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="left8" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -256.754 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="left9" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, -0.753418 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="left10" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 255.246 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="left11" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 511.269 )
 frames = SubResource( 3 )
-frame = 2
 playing = true
 
 [node name="left12" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 767.269 )
 frames = SubResource( 3 )
-frame = 2
 playing = true
 
 [node name="left13" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 1023.27 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="left14" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 1279.27 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="left15" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 1535.24 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="left16" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 1791.24 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="left17" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 2047.24 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="left18" type="AnimatedSprite" parent="border/topSprite"]
 position = Vector2( 1309.14, 2303.24 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="rightSprite" type="Node2D" parent="border"]
@@ -403,57 +891,59 @@ playing = true
 [node name="left2" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, -1052.47 )
 frames = SubResource( 3 )
-frame = 2
 playing = true
 
 [node name="left3" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, -796.474 )
 frames = SubResource( 3 )
-frame = 2
 playing = true
 
 [node name="left4" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, -540.474 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="left5" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, -284.474 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="left6" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, -28.5009 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="left7" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, 227.499 )
 frames = SubResource( 3 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="left8" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, 483.499 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="left9" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, 739.499 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="left10" type="AnimatedSprite" parent="border/rightSprite"]
 position = Vector2( 2559.22, 995.499 )
 frames = SubResource( 3 )
+frame = 1
 playing = true
 
 [node name="corner1" type="AnimatedSprite" parent="border"]
 position = Vector2( 2559.22, -1308.9 )
 frames = SubResource( 4 )
+frame = 1
 playing = true
 
 [node name="corner2" type="AnimatedSprite" parent="border"]
@@ -473,5 +963,5 @@ playing = true
 position = Vector2( -2047.14, -1309.85 )
 rotation = 4.71238
 frames = SubResource( 4 )
-frame = 1
+frame = 2
 playing = true
