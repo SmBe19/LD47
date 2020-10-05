@@ -74,13 +74,18 @@ _global_script_class_icons={
 
 [application]
 
-config/name="LD47"
+config/name="Bob in Wonderland"
 run/main_scene="res://scn/Game.tscn"
 config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
 Globals="*res://src/Globals.gd"
+
+[display]
+
+window/size/resizable=false
 
 [global]
 
