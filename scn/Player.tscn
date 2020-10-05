@@ -100,7 +100,7 @@ drag_margin_right = 0.3
 drag_margin_bottom = 0.4
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( 0, -50.5 )
+position = Vector2( 0, -30.5 )
 enabled = true
 cast_to = Vector2( 50, 0 )
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_animation_finished"]

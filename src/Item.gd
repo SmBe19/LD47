@@ -14,7 +14,6 @@ export var type = ItemType.Crystal
 var on_fire = false
 
 func _ready():
-	reset_queued = true
 	on_fire = false
 	initial_position = position
 	match type:
@@ -29,6 +28,9 @@ func _ready():
 		ItemType.HpBook,ItemType.DmgBook:
 			$Sprite.animation = "book"
 	$Sprite.playing = false
+	
+	
+	reset_queued = true
 
 func on_reset():
 	on_fire = false
@@ -68,14 +70,13 @@ func hurt(dmg):
 			death_queued = true
 		ItemType.HpBook, ItemType.DmgBook:
 			$Sprite.playing = true
-			
-			
-			
 
 
 func _integrate_forces(state):
 	if reset_queued:
-		state.transform.origin = initial_position
+		state.transform = Transform2D(0, initial_position)
+		state.linear_velocity = Vector2(0,0)
+		state.angular_velocity = 0
 		reset_queued = false
 	if death_queued:
 		state.transform.origin = Vector2(NAN, NAN)

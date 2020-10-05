@@ -17,6 +17,8 @@ export(float) var damage = 1
 
 export(float) var health = 1
 
+export(bool) var has_crystal = false
+
 func _ready():
 	initial_position = position
 	initial_health = health
@@ -28,8 +30,17 @@ func on_reset():
 
 
 func die():
+	var old_position = position
+
 	get_tree().root.get_child(0).play_at("enemydeath", position)
 	self.position = Vector2(NAN,NAN)
+	
+	if has_crystal:
+		has_crystal = false
+		var crystal = preload("res://scn/Item.tscn").instance()
+		crystal.type = Item.ItemType.Crystal
+		crystal.position = old_position
+		get_parent().add_child(crystal)
 
 func hurt(damage):
 	health -= damage

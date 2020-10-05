@@ -58,10 +58,12 @@ func process_input_event(ev_str):
 		match ev_str.substr(1):
 			"hp":
 				health += 1
+				if !is_replay:
+					$"/root/Game".player_extra_hp += 1
 			"dmg":
 				damage += 1
-		if get_tree(): # don't add powerups again if
-			$"/root/Game/".powerups.push_back(ev_str)
+				if !is_replay:
+					$"/root/Game".player_extra_dmg += 1
 		
 func hurt(hp):
 	health -= hp
@@ -160,7 +162,7 @@ func _on_animation_finished():
 	if $AnimatedSprite.animation.begins_with("attack_"):
 		var collider = $RayCast2D.get_collider()
 		if collider and collider.has_method("hurt") and !collider.has_method("player_marker"):
-			collider.hurt(1000)
+			collider.hurt(damage)
 			$"/root/Game".play_at("attack", position)
 		override_walk_animation = false
 

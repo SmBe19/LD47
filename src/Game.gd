@@ -9,7 +9,9 @@ var limit = 20
 var score = 0
 
 var ghosts = []
-var powerups = [] # list of powerup strings (@hp, @dmg), persistent
+
+var player_extra_hp = 0
+var player_extra_dmg = 0
 
 func _ready():
 	$UI/AnimationPlayer.play("Transition")
@@ -28,8 +30,8 @@ func restart():
 	player.set_name("Player")
 	player.position = $Level/SpawnPoint.position
 	player.position += Vector2(rand_range(-100, 100),rand_range(-100, 100))
-	for powerup in powerups:
-		player.process_input_event(powerup)
+	player.health += player_extra_hp
+	player.damage += player_extra_dmg
 	add_child(player)
 	
 	for x in ghosts:

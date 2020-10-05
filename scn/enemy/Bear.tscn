@@ -24,9 +24,9 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 109.288, 57.9597 )
+extents = Vector2( 80.1031, 57.9597 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 resource_name = "attack"
 loop = true
 tracks/0/type = "value"
@@ -42,8 +42,7 @@ tracks/0/keys = {
 "values": [ "attack" ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "idle"
+[sub_resource type="Animation" id=4]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:animation")
@@ -75,7 +74,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 46.4304, 105.664 )
+extents = Vector2( 84.032, 140.46 )
 
 [node name="Bear" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -83,20 +82,20 @@ script = ExtResource( 2 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -73.5213 )
 frames = SubResource( 1 )
-animation = "idle"
+animation = "attack"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -44.3372 )
+position = Vector2( 21.3267, -44.3372 )
 shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/attack = SubResource( 4 )
-anims/idle = SubResource( 3 )
+anims/attack = SubResource( 3 )
+anims/idle = SubResource( 4 )
 anims/stand = SubResource( 5 )
 
 [node name="DamageArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
-position = Vector2( -118.981, -44.3372 )
+position = Vector2( -128, -44.3372 )
 shape = SubResource( 6 )
