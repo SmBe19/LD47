@@ -1,0 +1,35 @@
+Bob in Wonderland
+=================
+
+M Signer*
+Benjamin Schmid*
+
+* University of The White Rabbit
+
+## Abstract
+In this game we present a novel protocol for escaping time loops. Compared to previous approaches this protocol even works in the precense of bears. We implemented the protocol in a reference implementation called "Bob in Wonderland".
+
+## Introduction
+In case of a time loop it is often required to perform complicated protocols to escape them [132,354,444]. While there exist many protocols [42,53,114,254] which are able to escape many common time loop scenarios, the case involving bears was an open problem for many decades [243,433]. Usually, Alice can just send a correctly configured time machine into the time loop. Bob can then activate the time machine and escape the time loop. A strict but simple protocol has to be followed between Alice and Bob to ensure the time machine stays in sync. However, in the precense of bears, it is possible that the time machine gets eaten by a bear and thus is not accessible anymore.
+
+## Protocol
+Our new protocol deals with bears by routing Bob through multiple time loops. As has been shown [324,544,567,772], travelling between time loops is much simpler than escaping a time loop. The following example using Alice (external person), Bob (person trapped in time loop), Eve (passive adversary trying to retrieve time loop rabbits), and Mallory (adversary trying to steal time crystals).
+
+Alice configures a time machine suitable for Bob to escabe the time loop. She then sends this time machine into a large time loop, where a bear will eat it. Furthermore, she sends several time crystals into a few smaller time loops and sets up portals between them. Bob will then collect the crystals, activate the portal, and proceed through the time loops until he arrives at the bear mountain. Once there, he kills the bear and can escape using the enclosed time machine.
+
+In the precense of Eve, Bob can use the rabbits which are controlled by Eve to gain more lives. However, the meat of the rabbit has to be cooked on a fire to be edible. Fire is easily created by punching wood.
+
+Note, that in the precense of an active adversary, such as Mallory, the time crystals will be eaten by insects living in the time loops. Killing them will release the crystals again. However, Mallory tries to prevent this by attacking Bob. As per usual time loop mechanics this will lead to a premature time loop reset if Bob loses too many lives. Our protocol is able to cope with this by spawning ghost copies of Bob's previous actions. By having more entities, it is possible to kill enough insects and retrieve the time crystals even in the presence of an active adversary.
+
+## Evaluation
+We tested the protocol in our reference implementation. We used the following keybindings:
+
+ - WASD/Arrows: Move
+ - Space: Attack/Interact
+
+We measured optimal time loop lengths of 15, 30, 45, and 60 seconds respectively for the four required time loops. Larger time loops require more time crystals to travel to another time loop. The reference implementation shows the required number of time crystals next to the portal. Furthermore, the UI provides information about the current loop iteration such as remaining time and remaining lives of Bob.
+
+Books should be used to increase the lives of Bob and the amount of damage he can deal. For short time gains, one of Eve's rabbits can be killed and it's meat can be cooked over a fire. Fires can be started by burning wood from trees or crates.
+
+## Conclusion (TLDR)
+Use WASD+Space to move/attack. Kill insects to retrieve time crystals. Find all time crystals. Activate portal using time crystals. Go to next level. Read books to get upgrades. At the end, kill the bear to get the time machine and escape the time loop.
