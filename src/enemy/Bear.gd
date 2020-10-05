@@ -21,9 +21,10 @@ func _ready():
 func move(delta):
 	pass
 
-
 func die():
-	.die()
+	idle_time = INF
+	print("bear ded")
+	remove_child($CollisionShape2D)
 	$AnimationPlayer.play("explode")
 
 func finish_game():
@@ -44,5 +45,5 @@ func _physics_process(delta):
 				body.hurt(3)
 	elif time > idle_time:
 		$AnimationPlayer.play("stand")
-	else:
+	elif idle_time < INF:
 		$AnimationPlayer.play("idle")

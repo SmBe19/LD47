@@ -11,7 +11,7 @@ var score = 0
 var ghosts = []
 
 var player_extra_hp = 0
-var player_extra_dmg = 0
+var player_extra_dmg = 1337
 
 func _ready():
 	$UI/AnimationPlayer.play("Transition")
@@ -82,6 +82,8 @@ func _process(delta):
 	if time > limit - 1:
 		if not $TransitionPlayer.playing:
 			$TransitionPlayer.play()
+		if $UI/AnimationPlayer.is_playing():
+			$UI/AnimationPlayer.seek($UI/AnimationPlayer.current_animation_length, true)
 		$UI/AnimationPlayer.play("Transition")
 	$UI/HealthDisplay.region_rect.size.x = 64 * max(0, $Player.health)
 	if time > limit:

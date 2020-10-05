@@ -70,8 +70,12 @@ func hurt(dmg):
 			death_queued = true
 		ItemType.HpBook, ItemType.DmgBook:
 			var bookanim = $"/root/Game/UI/BookAnim"
+			var booklabel = $"/root/Game/UI/BookLabel"
+			booklabel.text = "HP" if type == ItemType.HpBook else "DMG"
+			booklabel.show()
 			bookanim.play("open")
 			bookanim.connect("animation_finished", self, "_on_animation_finished", [bookanim])
+			bookanim.connect("animation_finished", booklabel, "hide")
 
 
 func _integrate_forces(state):

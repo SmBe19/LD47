@@ -21,15 +21,15 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "attack",
-"speed": 0.5
-}, {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "stand",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "attack",
+"speed": 0.5
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -169,7 +169,7 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0, 0.1 ),
+"times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
@@ -332,6 +332,18 @@ tracks/25/keys = {
 "method": "finish_game"
 } ]
 }
+tracks/26/type = "value"
+tracks/26/path = NodePath("animation_stuff:visible")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [sub_resource type="Animation" id=5]
 loop = true
@@ -366,7 +378,7 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 84.032, 140.46 )
 
-[sub_resource type="SpriteFrames" id=9]
+[sub_resource type="SpriteFrames" id=8]
 animations = [ {
 "frames": [ ExtResource( 13 ), ExtResource( 6 ) ],
 "loop": true,
@@ -374,7 +386,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=8]
+[sub_resource type="SpriteFrames" id=9]
 animations = [ {
 "frames": [ ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ), null ],
 "loop": false,
@@ -388,10 +400,9 @@ damage = 9999.0
 health = 120.0
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-visible = false
 position = Vector2( 0, -73.5213 )
 frames = SubResource( 1 )
-animation = "idle"
+animation = "attack"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -411,45 +422,46 @@ position = Vector2( -128, -44.3372 )
 shape = SubResource( 7 )
 
 [node name="animation_stuff" type="Node2D" parent="."]
+visible = false
 
 [node name="bearsign" type="Sprite" parent="animation_stuff"]
-position = Vector2( -236.223, -173.153 )
-rotation = -0.261799
+position = Vector2( 0, -80.4488 )
+rotation = 15.708
 texture = ExtResource( 8 )
 
 [node name="timemachine" type="Sprite" parent="animation_stuff"]
-position = Vector2( 300, -80.4488 )
+position = Vector2( 21.3267, -35.6065 )
+rotation = 7.59216
 texture = ExtResource( 9 )
 
 [node name="vwkafer" type="Sprite" parent="animation_stuff"]
-position = Vector2( 128, -174.836 )
+position = Vector2( -22.563, -80.4488 )
 rotation = -2.35619
 texture = ExtResource( 7 )
 
 [node name="crystal" type="Sprite" parent="animation_stuff"]
-position = Vector2( 146.482, -0.464478 )
-rotation = -0.912905
+position = Vector2( 1.48232, -35.4645 )
+rotation = 12.5664
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
 
 [node name="crystal2" type="Sprite" parent="animation_stuff"]
-position = Vector2( -123.157, 34.6417 )
-rotation = -2.41205
+position = Vector2( 7.8748, -57.3326 )
+rotation = 12.2173
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
 
 [node name="crystal3" type="Sprite" parent="animation_stuff"]
-position = Vector2( -43.7819, -136.708 )
-rotation = 0.179009
+position = Vector2( 14.1744, -52.2929 )
+rotation = -5.23599
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 5 )
 
 [node name="cobold" type="AnimatedSprite" parent="animation_stuff"]
-position = Vector2( 232.15, -63.2802 )
-frames = SubResource( 9 )
-frame = 1
+position = Vector2( 10.7223, -75.9938 )
+rotation = -5.23599
+frames = SubResource( 8 )
 
 [node name="expl" type="AnimatedSprite" parent="animation_stuff"]
 position = Vector2( 12.8318, -73.8417 )
-frames = SubResource( 8 )
-frame = 3
+frames = SubResource( 9 )
