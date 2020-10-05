@@ -1403,7 +1403,6 @@ has_crystal = true
 
 [node name="Spider4" parent="enemy" instance=ExtResource( 23 )]
 position = Vector2( -2442.42, 933.257 )
-has_crystal = true
 
 [node name="Ant5" parent="enemy" instance=ExtResource( 14 )]
 position = Vector2( -2553.42, 388.356 )
