@@ -39,7 +39,7 @@ position = Vector2( 130.929, 236.697 )
 [node name="Portal" parent="." instance=ExtResource( 10 )]
 position = Vector2( 3202.18, -1212 )
 crystal_needed = 7
-target_level = "res://scn/lvl/LevelTest.tscn"
+target_level = "res://scn/lvl/Level3.tscn"
 
 [node name="Env" type="YSort" parent="."]
 

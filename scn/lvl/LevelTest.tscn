@@ -29,7 +29,7 @@ position = Vector2( -310.523, 0 )
 [node name="Portal" parent="." instance=ExtResource( 10 )]
 position = Vector2( 370.326, -45.5257 )
 active = true
-target_level = "res://scn/lvl/Level1.tscn"
+target_level = "res://scn/lvl/Level3.tscn"
 
 [node name="Tree1" parent="." instance=ExtResource( 6 )]
 position = Vector2( -381.571, 121.373 )

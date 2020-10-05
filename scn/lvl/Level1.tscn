@@ -65,7 +65,7 @@ position = Vector2( 2.42937, 0 )
 [node name="Portal" parent="." instance=ExtResource( 10 )]
 position = Vector2( 385.445, -257.193 )
 crystal_needed = 4
-target_level = "res://scn/lvl/LevelTest.tscn"
+target_level = "res://scn/lvl/Level2.tscn"
 
 [node name="env" type="YSort" parent="."]
 
@@ -943,25 +943,24 @@ playing = true
 [node name="corner1" type="AnimatedSprite" parent="border"]
 position = Vector2( 2559.22, -1308.9 )
 frames = SubResource( 4 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="corner2" type="AnimatedSprite" parent="border"]
 position = Vector2( 2558.71, 1251.42 )
 rotation = 1.57079
 frames = SubResource( 4 )
+frame = 1
 playing = true
 
 [node name="corner3" type="AnimatedSprite" parent="border"]
 position = Vector2( -2048.61, 1248.86 )
 rotation = 3.14159
 frames = SubResource( 4 )
-frame = 2
 playing = true
 
 [node name="corner4" type="AnimatedSprite" parent="border"]
 position = Vector2( -2047.14, -1309.85 )
 rotation = 4.71238
 frames = SubResource( 4 )
-frame = 2
 playing = true

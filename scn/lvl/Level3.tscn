@@ -33,7 +33,7 @@
 [ext_resource path="res://scn/env/Rock2.tscn" type="PackedScene" id=31]
 [ext_resource path="res://scn/env/Vwkafer.tscn" type="PackedScene" id=32]
 [ext_resource path="res://scn/env/Rock4.tscn" type="PackedScene" id=33]
-[ext_resource path="res://img/env/mountain.png" type="Texture" id=34]
+[ext_resource path="res://scn/env/Cave.tscn" type="PackedScene" id=34]
 [ext_resource path="res://img/enemy/cobold.png" type="Texture" id=35]
 [ext_resource path="res://img/enemy/cobold_attack.png" type="Texture" id=36]
 
@@ -49,7 +49,7 @@ extents = Vector2( 34.3608, 220.987 )
 position = Vector2( 19.9066, 83.8364 )
 
 [node name="Cave" type="YSort" parent="."]
-position = Vector2( 404.653, 3468.06 )
+position = Vector2( 1516.49, 5449.42 )
 
 [node name="CaveSpawn" type="Node2D" parent="Cave"]
 position = Vector2( -577.651, -41.5305 )
@@ -1172,6 +1172,6 @@ position = Vector2( 1728.5, 1525.8 )
 [node name="Spider21" parent="Spiders/enemy" instance=ExtResource( 15 )]
 position = Vector2( -790.66, 735.291 )
 
-[node name="mountain" type="Sprite" parent="."]
-position = Vector2( 3648.52, 218.531 )
-texture = ExtResource( 34 )
+[node name="Cave2" parent="." instance=ExtResource( 34 )]
+position = Vector2( 3634.28, 290.317 )
+teleport_target = NodePath("../Cave/CaveSpawn")
