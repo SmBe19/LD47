@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scn/env/Tree1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scn/env/Rock1.tscn" type="PackedScene" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://scn/env/Flower2.tscn" type="PackedScene" id=25]
 [ext_resource path="res://scn/env/Flower1.tscn" type="PackedScene" id=26]
 [ext_resource path="res://scn/env/Flower3.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scn/env/Vwkafer.tscn" type="PackedScene" id=28]
 
 [node name="LevelTest" type="YSort"]
 
@@ -635,6 +636,723 @@ position = Vector2( 2645.91, -1881.86 )
 [node name="Flower45" parent="Env" instance=ExtResource( 26 )]
 position = Vector2( 3648.26, -1417.68 )
 
+[node name="Flower46" parent="Env" instance=ExtResource( 27 )]
+position = Vector2( 110.418, 215.237 )
+
+[node name="Flower47" parent="Env" instance=ExtResource( 25 )]
+position = Vector2( 40.4182, 493.237 )
+
+[node name="Flower48" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 392.418, 361.237 )
+
+[node name="Flower49" parent="Env" instance=ExtResource( 27 )]
+position = Vector2( 606.418, 501.237 )
+
+[node name="Flower50" parent="Env" instance=ExtResource( 25 )]
+position = Vector2( 318.418, -28.7629 )
+
+[node name="Flower51" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 192.418, -206.763 )
+
+[node name="Flower52" parent="Env" instance=ExtResource( 27 )]
+position = Vector2( -151.582, -130.763 )
+
+[node name="Flower53" parent="Env" instance=ExtResource( 25 )]
+position = Vector2( -143.582, 169.237 )
+
+[node name="Flower54" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 272.418, 579.237 )
+
+[node name="Grass86" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( 36.4182, -84.7629 )
+
+[node name="Grass87" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( 362.418, 141.237 )
+
+[node name="Grass88" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( -149.582, 393.237 )
+
+[node name="Grass89" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 74.4182, 635.237 )
+
+[node name="Grass90" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 466.418, 613.237 )
+
+[node name="Grass91" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 644.418, 263.237 )
+
+[node name="Grass92" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( 432.418, -242.763 )
+
+[node name="Grass93" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( 6.41821, -286.763 )
+
+[node name="Grass94" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -283.582, 3.23706 )
+
+[node name="Grass95" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( -727.582, 77.2371 )
+
+[node name="Grass96" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 290.418, -342.763 )
+
+[node name="Grass97" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( -241.582, -354.763 )
+
+[node name="Grass98" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 232.418, 369.237 )
+
+[node name="Grass99" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( 804.418, 579.237 )
+
+[node name="Grass100" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( 190.418, 745.237 )
+
+[node name="Grass101" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -11.5818, 763.237 )
+
+[node name="Grass102" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( 700.418, 683.237 )
+
+[node name="Grass103" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 906.418, 303.237 )
+
+[node name="Grass104" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 998.418, -44.7629 )
+
+[node name="Grass105" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 830.418, -472.763 )
+
+[node name="Grass106" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( 146.418, -398.763 )
+
+[node name="Pond2" parent="Env" instance=ExtResource( 24 )]
+position = Vector2( 1596.61, 1636.35 )
+
+[node name="Rock19" parent="Env" instance=ExtResource( 2 )]
+position = Vector2( 2164.19, 1986.47 )
+
+[node name="Rock20" parent="Env" instance=ExtResource( 9 )]
+position = Vector2( 1596.19, 1914.47 )
+
+[node name="Rock21" parent="Env" instance=ExtResource( 7 )]
+position = Vector2( 2008.19, 1682.47 )
+
+[node name="Rock22" parent="Env" instance=ExtResource( 11 )]
+position = Vector2( 1656.19, 1394.47 )
+
+[node name="Rock23" parent="Env" instance=ExtResource( 9 )]
+position = Vector2( 1168.19, 1522.47 )
+
+[node name="Rock24" parent="Env" instance=ExtResource( 7 )]
+position = Vector2( 1204.19, 1846.47 )
+
+[node name="Shroom9" parent="Env" instance=ExtResource( 5 )]
+position = Vector2( 1428.19, 1422.47 )
+
+[node name="Shroom10" parent="Env" instance=ExtResource( 5 )]
+position = Vector2( 832.186, 1746.47 )
+
+[node name="Tree20" parent="Env" instance=ExtResource( 1 )]
+position = Vector2( 1896.19, 1426.47 )
+
+[node name="Tree21" parent="Env" instance=ExtResource( 4 )]
+position = Vector2( 2280.19, 1742.47 )
+
+[node name="Tree22" parent="Env" instance=ExtResource( 1 )]
+position = Vector2( 1384.19, 1946.47 )
+
+[node name="Tree23" parent="Env" instance=ExtResource( 4 )]
+position = Vector2( 1812.19, 2098.47 )
+
+[node name="Grass107" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( 1122.54, 1623.22 )
+
+[node name="Grass108" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 1602.03, 1496.74 )
+
+[node name="Grass109" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 2004.12, 1806.33 )
+
+[node name="VWKafer" parent="Env" instance=ExtResource( 28 )]
+position = Vector2( 2162.69, 1893.17 )
+
+[node name="Flower55" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 197.543, 971.947 )
+
+[node name="Flower56" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 310.808, 1115.42 )
+
+[node name="Flower57" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 412.747, 1236.23 )
+
+[node name="Flower58" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 529.787, 1357.05 )
+
+[node name="Flower59" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 635.501, 1455.21 )
+
+[node name="Flower60" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 729.888, 1542.05 )
+
+[node name="Flower61" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 416.522, 839.804 )
+
+[node name="Flower62" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 514.685, 956.845 )
+
+[node name="Flower63" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 624.175, 1073.89 )
+
+[node name="Flower64" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 741.215, 1187.15 )
+
+[node name="Flower65" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 880.908, 1296.64 )
+
+[node name="Flower66" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 1013.05, 1372.15 )
+
+[node name="Flower67" parent="Env" instance=ExtResource( 25 )]
+position = Vector2( 546.724, 818.264 )
+
+[node name="Flower68" parent="Env" instance=ExtResource( 25 )]
+position = Vector2( 729.861, 1032.32 )
+
+[node name="Flower69" parent="Env" instance=ExtResource( 25 )]
+position = Vector2( 893.972, 1127.46 )
+
+[node name="Flower70" parent="Env" instance=ExtResource( 25 )]
+position = Vector2( 147.15, 1120.32 )
+
+[node name="Flower71" parent="Env" instance=ExtResource( 25 )]
+position = Vector2( 330.288, 1310.6 )
+
+[node name="Flower72" parent="Env" instance=ExtResource( 25 )]
+position = Vector2( 506.29, 1462.81 )
+
+[node name="Flower73" parent="Env" instance=ExtResource( 25 )]
+position = Vector2( 639.482, 1555.57 )
+
+[node name="Flower74" parent="Env" instance=ExtResource( 25 )]
+position = Vector2( -19.339, 982.374 )
+
+[node name="Flower75" parent="Env" instance=ExtResource( 25 )]
+position = Vector2( 777.43, 823.021 )
+
+[node name="Flower76" parent="Env" instance=ExtResource( 27 )]
+position = Vector2( 920.135, 939.563 )
+
+[node name="Flower77" parent="Env" instance=ExtResource( 27 )]
+position = Vector2( 675.158, 899.13 )
+
+[node name="Flower78" parent="Env" instance=ExtResource( 27 )]
+position = Vector2( 192.34, 1274.92 )
+
+[node name="Flower79" parent="Env" instance=ExtResource( 27 )]
+position = Vector2( -5.06854, 1158.38 )
+
+[node name="Flower80" parent="Env" instance=ExtResource( 27 )]
+position = Vector2( 368.342, 1481.84 )
+
+[node name="Flower81" parent="Env" instance=ExtResource( 27 )]
+position = Vector2( 582.4, 1636.44 )
+
+[node name="Flower82" parent="Env" instance=ExtResource( 27 )]
+position = Vector2( 1096.14, 1172.65 )
+
+[node name="Grass110" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( 316.018, 908.644 )
+
+[node name="Grass111" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( 482.507, 1091.78 )
+
+[node name="Grass112" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 620.455, 1263.03 )
+
+[node name="Grass113" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( 767.917, 1351.03 )
+
+[node name="Grass114" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 981.974, 1593.63 )
+
+[node name="Grass115" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 1022.41, 1736.33 )
+
+[node name="Rock25" parent="Env" instance=ExtResource( 9 )]
+position = Vector2( 934.405, 2024.12 )
+
+[node name="Rock26" parent="Env" instance=ExtResource( 7 )]
+position = Vector2( 1317.33, 1167.89 )
+
+[node name="Grass116" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( 1074.73, 711.234 )
+
+[node name="Grass117" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( 1265, 903.885 )
+
+[node name="Grass118" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( 1350.63, 592.313 )
+
+[node name="Grass119" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 1693.12, 811.127 )
+
+[node name="Grass120" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 1574.2, 977.616 )
+
+[node name="Grass121" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 1678.85, 1175.02 )
+
+[node name="Grass122" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( 2125.99, 1108.43 )
+
+[node name="Grass123" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 1098.52, 911.021 )
+
+[node name="Grass124" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 1234.09, 677.936 )
+
+[node name="Grass125" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( 2363.7, 1221.96 )
+
+[node name="Grass126" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 2046.06, 1326.84 )
+
+[node name="Grass127" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 2432.62, 973.237 )
+
+[node name="Grass128" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 2564.47, 1191.99 )
+
+[node name="Grass129" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 2540.5, 1401.75 )
+
+[node name="Grass130" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( 2549.49, 1665.46 )
+
+[node name="Grass131" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( 2585.45, 1854.24 )
+
+[node name="Grass132" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( 2537.5, 2072.99 )
+
+[node name="Grass133" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( 1512.66, 2108.95 )
+
+[node name="Grass134" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 1207.01, 2111.95 )
+
+[node name="Grass135" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 583.712, 1881.21 )
+
+[node name="Grass136" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( -120.493, 1332.83 )
+
+[node name="Grass137" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 2.36829, 1596.53 )
+
+[node name="Grass138" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 337.989, 1695.42 )
+
+[node name="Grass139" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( 161.189, 1767.34 )
+
+[node name="Grass140" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -183.422, 1662.46 )
+
+[node name="Grass141" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( -557.999, 1623.5 )
+
+[node name="Grass142" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( 427.887, 1899.19 )
+
+[node name="Grass143" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 83.2769, 1434.72 )
+
+[node name="Grass144" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 188.158, 1584.55 )
+
+[node name="Grass145" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( -432.141, 1755.35 )
+
+[node name="Grass146" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( -36.5876, 1800.3 )
+
+[node name="Grass147" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( -264.33, 1299.87 )
+
+[node name="Grass148" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -575.978, 1203.98 )
+
+[node name="Grass149" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( -695.843, 1758.35 )
+
+[node name="Grass150" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( -249.347, 1860.23 )
+
+[node name="Grass151" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( -878.636, 1869.22 )
+
+[node name="Grass152" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 287.047, 1869.22 )
+
+[node name="Grass153" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( 65.2972, 1932.15 )
+
+[node name="Flower83" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 2864.33, 1055.6 )
+
+[node name="Grass154" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( 3207.21, 868.282 )
+
+[node name="Grass155" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( 2838.93, 1325.45 )
+
+[node name="Grass156" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( 2915.13, 1715.95 )
+
+[node name="Grass157" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 3118.31, 1227.04 )
+
+[node name="Grass158" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 3407.22, 1052.42 )
+
+[node name="Grass159" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 3121.49, 1420.7 )
+
+[node name="Grass160" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( 2794.48, 1979.46 )
+
+[node name="Grass161" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 2223.02, 2150.9 )
+
+[node name="Grass162" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 2834.84, 1517.59 )
+
+[node name="Grass163" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 3734.28, 404.244 )
+
+[node name="Grass164" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( 2984.2, 431.152 )
+
+[node name="Grass165" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 3630.01, 797.783 )
+
+[node name="Grass166" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( -1056.12, -766.631 )
+
+[node name="Grass167" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -526.313, -964.185 )
+
+[node name="Grass168" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( 66.3469, -1318.88 )
+
+[node name="Grass169" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( -67.5476, -783.953 )
+
+[node name="Grass170" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( -410.039, -650.762 )
+
+[node name="Grass171" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 265.43, -719.511 )
+
+[node name="Grass172" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( -21.8315, -608.638 )
+
+[node name="Grass173" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( -770.798, -679.909 )
+
+[node name="Grass174" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -1351.66, -587.256 )
+
+[node name="Grass175" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( -959.668, -1203.76 )
+
+[node name="Grass176" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( -499.965, -1481.72 )
+
+[node name="Grass177" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 490.715, -1307.1 )
+
+[node name="Grass178" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 280.463, -1046.96 )
+
+[node name="Grass179" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( -153.508, -1084.71 )
+
+[node name="Grass180" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( -885.955, -1563.7 )
+
+[node name="Grass181" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -149.733, -1710.94 )
+
+[node name="Grass182" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( 310.878, -1805.33 )
+
+[node name="Grass183" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 865.876, -1563.23 )
+
+[node name="Grass184" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 897.876, -1367.23 )
+
+[node name="Grass185" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( -1290.12, -1051.23 )
+
+[node name="Grass186" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( -1170.12, -1403.23 )
+
+[node name="Grass187" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( -538.124, -1883.23 )
+
+[node name="Grass188" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -546.124, -1223.23 )
+
+[node name="Grass189" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( 505.876, -1595.23 )
+
+[node name="Grass190" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 797.876, -1863.23 )
+
+[node name="Grass191" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 1281.88, -1795.23 )
+
+[node name="Grass192" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( -1686.12, -783.226 )
+
+[node name="Grass193" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( -1558.12, -1139.23 )
+
+[node name="Grass194" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( -1438.12, -1635.23 )
+
+[node name="Grass195" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -1062.12, -1879.23 )
+
+[node name="Grass196" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( -138.124, -2183.23 )
+
+[node name="Grass197" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 417.876, -2251.23 )
+
+[node name="Grass198" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 1013.88, -2267.23 )
+
+[node name="Grass199" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 481.876, -963.226 )
+
+[node name="Flower84" parent="Env" instance=ExtResource( 26 )]
+position = Vector2( 159.799, -912.371 )
+
+[node name="Flower85" parent="Env" instance=ExtResource( 25 )]
+position = Vector2( -793.718, -916.609 )
+
+[node name="Flower86" parent="Env" instance=ExtResource( 27 )]
+position = Vector2( 223.367, -1446.34 )
+
+[node name="Grass200" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( 1619.73, -2133.88 )
+
+[node name="Grass201" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( 2235.64, -2254.52 )
+
+[node name="Grass202" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( -2317.03, -698.865 )
+
+[node name="Grass203" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( -2825, -463.93 )
+
+[node name="Grass204" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( -2685.3, -863.955 )
+
+[node name="Grass205" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( -2202.73, -1200.48 )
+
+[node name="Grass206" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( -2501.17, -1644.96 )
+
+[node name="Grass207" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( -2985.24, -1238.58 )
+
+[node name="Grass208" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( -3137.64, -578.223 )
+
+[node name="Grass209" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( -3315.42, -273.441 )
+
+[node name="Grass210" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( -3474.16, 196.429 )
+
+[node name="Grass211" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( -2007.41, -978.248 )
+
+[node name="Grass212" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -1880.41, -1625.91 )
+
+[node name="Grass213" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( -3328.12, -978.248 )
+
+[node name="Grass214" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( -2616.97, -1302.08 )
+
+[node name="Grass215" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( -1969.31, -2006.88 )
+
+[node name="Grass216" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( -3690.05, -502.027 )
+
+[node name="Grass217" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( -3794.46, 228.178 )
+
+[node name="Grass218" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( -3794.46, 628.203 )
+
+[node name="Grass219" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( -3705.56, 1002.83 )
+
+[node name="Grass220" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( -3686.51, 1288.56 )
+
+[node name="Grass221" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -3451.58, 1586.99 )
+
+[node name="Grass222" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( -3648.42, 1853.68 )
+
+[node name="Grass223" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -3476.98, 2139.41 )
+
+[node name="Grass224" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( -2784.87, 2177.51 )
+
+[node name="Grass225" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -2118.16, 2177.51 )
+
+[node name="Grass226" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( -1460.61, 2208.62 )
+
+[node name="Grass227" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( -1778.1, 2361.01 )
+
+[node name="Grass228" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( -876.451, 2145.13 )
+
+[node name="Grass229" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( -368.483, 2418.16 )
+
+[node name="Grass230" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( 418.868, 2240.37 )
+
+[node name="Grass231" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -2922.3, -1842.61 )
+
+[node name="Grass232" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( -3413.39, -1425.53 )
+
+[node name="Grass233" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( -3669.02, -1183.35 )
+
+[node name="Grass234" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( -3581.57, -1963.7 )
+
+[node name="Grass235" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( -2464.86, -2078.06 )
+
+[node name="Grass236" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 3282.42, 1970.3 )
+
+[node name="Grass237" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 3725.91, 1405.85 )
+
+[node name="Grass238" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( 4290.36, 861.564 )
+
+[node name="Grass239" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( 4401.23, 397.914 )
+
+[node name="Grass240" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( 4098.85, -1769.15 )
+
+[node name="Grass241" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( 3211.87, -2474.71 )
+
+[node name="Grass242" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 2738.14, -2383.99 )
+
+[node name="Grass243" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 4381.07, 1244.58 )
+
+[node name="Grass244" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 4159.33, 1627.6 )
+
+[node name="Grass245" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( 2788.53, 2564.98 )
+
+[node name="Grass246" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 3695.68, 2272.68 )
+
+[node name="Grass247" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 3735.99, 1859.42 )
+
+[node name="Grass248" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( 4310.52, 1909.82 )
+
+[node name="Grass249" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( 4078.69, 1042.99 )
+
+[node name="Grass250" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( 4078.69, 498.707 )
+
+[node name="Grass251" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( 4461.71, 55.2151 )
+
+[node name="Grass252" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( 3352.98, 1587.28 )
+
+[node name="Grass253" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( 3756.15, 1093.39 )
+
+[node name="Grass254" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( -386.468, 2081.17 )
+
+[node name="Grass255" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( 833.135, 2222.28 )
+
+[node name="Grass256" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( -2452.74, -478.991 )
+
+[node name="Grass257" parent="Env" instance=ExtResource( 22 )]
+position = Vector2( -2210.83, -1587.72 )
+
+[node name="Grass258" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( -1696.79, -1406.29 )
+
+[node name="Grass259" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 127.58, -2000.98 )
+
+[node name="Grass260" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( -1535.52, -1920.34 )
+
+[node name="Grass261" parent="Env" instance=ExtResource( 16 )]
+position = Vector2( 460.199, -1950.58 )
+
+[node name="Grass262" parent="Env" instance=ExtResource( 6 )]
+position = Vector2( -3060.61, -1548.34 )
+
+[node name="Grass263" parent="Env" instance=ExtResource( 18 )]
+position = Vector2( 1467.17, -1868.7 )
+
+[node name="Grass264" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( 1883.64, 2413.47 )
+
+[node name="Grass265" parent="Env" instance=ExtResource( 21 )]
+position = Vector2( 1296.31, 2349.39 )
+
+[node name="Grass266" parent="Env" instance=ExtResource( 19 )]
+position = Vector2( -1117.08, 2402.79 )
+
+[node name="Grass267" parent="Env" instance=ExtResource( 20 )]
+position = Vector2( -2387.85, 2445.5 )
+
 [node name="Ant" parent="." instance=ExtResource( 14 )]
 position = Vector2( -1154.17, 88.9972 )
 
@@ -704,3 +1422,48 @@ has_crystal = true
 
 [node name="Bee7" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1268.11, -625.79 )
+
+[node name="Ant10" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1030.81, 1629.07 )
+has_crystal = true
+
+[node name="Crab2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1716.8, 1488.31 )
+has_crystal = true
+
+[node name="Ant11" parent="." instance=ExtResource( 14 )]
+position = Vector2( -1982.06, -1441.55 )
+
+[node name="Spider5" parent="." instance=ExtResource( 23 )]
+position = Vector2( -754.004, -1719.2 )
+has_crystal = true
+
+[node name="Ant12" parent="." instance=ExtResource( 14 )]
+position = Vector2( -3413.01, -715.399 )
+
+[node name="Ant13" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3891.24, 1644.6 )
+
+[node name="Bunny" parent="." instance=ExtResource( 17 )]
+position = Vector2( 1605.13, 446.033 )
+
+[node name="Bunny2" parent="." instance=ExtResource( 17 )]
+position = Vector2( -1957.74, -633.767 )
+
+[node name="Bunny3" parent="." instance=ExtResource( 17 )]
+position = Vector2( -549.713, 1987.25 )
+
+[node name="Bunny4" parent="." instance=ExtResource( 17 )]
+position = Vector2( 3289.05, 707.658 )
+
+[node name="Bunny5" parent="." instance=ExtResource( 17 )]
+position = Vector2( 3043.65, -1538.63 )
+
+[node name="Bunny6" parent="." instance=ExtResource( 17 )]
+position = Vector2( 3790.36, -1023.85 )
+
+[node name="Bunny7" parent="." instance=ExtResource( 17 )]
+position = Vector2( 3530.14, -1561.25 )
+
+[node name="Bunny8" parent="." instance=ExtResource( 17 )]
+position = Vector2( 479.641, -509.077 )
