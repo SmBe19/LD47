@@ -15,8 +15,7 @@ func on_reset():
 	.on_reset()
 
 func _ready():
-	initial_health = 120
-	health = initial_health
+	initial_health = health
 	on_reset()
 	get_tree().root.get_child(0).play_music("res://msc/CursedMeadow.ogg", true)
 
