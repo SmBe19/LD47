@@ -23,9 +23,12 @@ func move(delta):
 
 
 func die():
+	.die()
+	$AnimationPlayer.play("explode")
+
+func finish_game():
 	var game = get_tree().root.get_child(0)
 	game.finish()
-	.die()
 
 func _physics_process(delta):
 	time += delta

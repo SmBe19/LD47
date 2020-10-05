@@ -13,8 +13,10 @@ func set_crystal_count(_count):
 	if crystal_count >= crystal_needed:
 		set_active(true)
 		$"/root/Game".play_at("portalactivate", position)
+		
 	else:
 		$"/root/Game".play_at("crystalactivate", position)
+	$Label.visible = crystal_count < crystal_needed
 	$Label.text = "%d/%d" % [crystal_count, crystal_needed]
 
 func set_active(_active):
