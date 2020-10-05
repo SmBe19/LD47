@@ -91,6 +91,8 @@ func _integrate_forces(state):
 
 
 func _on_animation_finished(bookanim):
+	if $"/root/Game/Player" == null:
+		return
 	match type:
 		ItemType.DmgBook:
 			$"/root/Game/Player".learn_dmg(1)

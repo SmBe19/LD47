@@ -67,6 +67,7 @@ func process_input_event(ev_str):
 		
 func hurt(hp):
 	health -= hp
+	$"/root/Game".play_at("attack", position)
 	if is_replay:
 		self.modulate.g = 0.5
 		self.modulate.b = 0.5

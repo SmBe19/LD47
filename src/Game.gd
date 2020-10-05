@@ -61,9 +61,9 @@ func restart():
 
 func get_players():
 	var res = []
-	res.push_back($Player)
 	for x in $Ghosts.get_children():
 		res.push_back(x)
+	res.push_back($Player)
 	return res
 
 func player_hurt():

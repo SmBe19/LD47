@@ -16,7 +16,7 @@ Ludum Dare 47
  - Fire
  - Book Upgrade
  - Bear Explosion
- - Enemy Attack
+ x Enemy Attack
    - Ant
    - Spider
    - Crab
