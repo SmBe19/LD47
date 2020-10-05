@@ -79,19 +79,25 @@ func _process(delta):
 				self.remove_child(child)
 		restart()
 
-	var crystals = []
+	var indicators = []
 	var stack = get_children()
 	while !stack.empty():
 		var node = stack.pop_back()
 		stack += node.get_children()
 		if node is Enemy:
 			if node.has_crystal:
-				crystals.push_back(node.global_position)
+				indicators.push_back([node.global_position, preload("res://img/ui/crystalindicator.png")])
 		if node is Item:
-			if node.type == Item.ItemType.Crystal:
-				crystals.push_back(node.global_position)
+			match node.type:
+				Item.ItemType.Crystal:
+					indicators.push_back([node.global_position, preload("res://img/ui/crystalindicator.png")])
+					indicators.push_back(node.global_position)
+				Item.ItemType.HpBook, Item.ItemType.DmgBook:
+					indicators.push_back([node.global_position, preload("res://img/ui/bookindicator.png")])
+		if node is Portal:
+			indicators.push_back([node.global_position, preload("res://img/ui/portalindicator.png")])
 
-	$UI/CrystalIndicators.crystal_positions = crystals
+	$UI/CrystalIndicators.indicators = indicators
 
 
 func load_level(level):

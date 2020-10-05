@@ -1,8 +1,7 @@
 extends Node2D
 
-var crystal_positions = []
-export(Texture) var texture
 
+var indicators = []
 var margin = 32
 
 func _ready():
@@ -13,7 +12,9 @@ func _process(delta):
 
 func _draw():
 	var camera = $"../../Player/Camera2D"
-	for pos in crystal_positions:
+	for x in indicators:
+		var pos = x[0]
+		var texture = x[1]
 		var relpos = pos - camera.get_camera_screen_center()
 		var onscreen = true
 		if abs(relpos.x) > position.x - margin:
@@ -22,4 +23,6 @@ func _draw():
 		if abs(relpos.y) > position.y - margin:
 			relpos *= (position.y-margin)/abs(relpos.y)
 			onscreen = false
-		draw_texture(texture, relpos - texture.get_size() / 2)
+		if !onscreen:
+			draw_texture(texture, relpos - texture.get_size() / 2)
+		

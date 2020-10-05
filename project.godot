@@ -39,6 +39,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Player.gd"
 }, {
+"base": "StaticBody2D",
+"class": "Portal",
+"language": "GDScript",
+"path": "res://src/Portal.gd"
+}, {
 "base": "Reference",
 "class": "Secret",
 "language": "GDScript",
@@ -56,6 +61,7 @@ _global_script_class_icons={
 "Enemy": "",
 "Item": "",
 "Player": "",
+"Portal": "",
 "Secret": "",
 "Sounds": ""
 }

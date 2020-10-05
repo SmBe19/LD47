@@ -1,4 +1,5 @@
 extends StaticBody2D
+class_name Portal
 
 
 export(bool) var active = false setget set_active

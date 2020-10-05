@@ -73,14 +73,14 @@ position = Vector2( 370.326, -687.332 )
 type = 2
 
 [node name="Ant" parent="." instance=ExtResource( 17 )]
-position = Vector2( 3404.83, 402.024 )
+position = Vector2( -118.347, 379.215 )
 
 [node name="Crab" parent="." instance=ExtResource( 14 )]
-position = Vector2( 3741.51, 360.437 )
+position = Vector2( 218.329, 337.628 )
 has_crystal = true
 
 [node name="Spider" parent="." instance=ExtResource( 2 )]
-position = Vector2( 3592.47, -335.749 )
+position = Vector2( 69.2976, -358.558 )
 
 [node name="Pond" parent="." instance=ExtResource( 7 )]
 position = Vector2( -678.098, -147.119 )
@@ -89,4 +89,4 @@ position = Vector2( -678.098, -147.119 )
 position = Vector2( -493.058, -9.89429 )
 
 [node name="Bee" parent="." instance=ExtResource( 18 )]
-position = Vector2( 4154.16, -172.139 )
+position = Vector2( 630.978, -194.948 )
