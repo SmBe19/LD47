@@ -1353,117 +1353,127 @@ position = Vector2( -1117.08, 2402.79 )
 [node name="Grass267" parent="Env" instance=ExtResource( 20 )]
 position = Vector2( -2387.85, 2445.5 )
 
-[node name="Ant" parent="." instance=ExtResource( 14 )]
+[node name="enemy" type="YSort" parent="."]
+
+[node name="Ant" parent="enemy" instance=ExtResource( 14 )]
 position = Vector2( -1154.17, 88.9972 )
 
-[node name="Ant2" parent="." instance=ExtResource( 14 )]
+[node name="Ant2" parent="enemy" instance=ExtResource( 14 )]
 position = Vector2( -1073.44, 617.08 )
 
-[node name="Ant3" parent="." instance=ExtResource( 14 )]
+[node name="Ant3" parent="enemy" instance=ExtResource( 14 )]
 position = Vector2( -706.812, 997.165 )
 
-[node name="Ant4" parent="." instance=ExtResource( 14 )]
+[node name="Ant4" parent="enemy" instance=ExtResource( 14 )]
 position = Vector2( -1271.89, 882.803 )
 has_crystal = true
 
-[node name="Bee" parent="." instance=ExtResource( 15 )]
+[node name="Bee" parent="enemy" instance=ExtResource( 15 )]
 position = Vector2( -1292.07, 549.809 )
 
-[node name="Bee2" parent="." instance=ExtResource( 15 )]
+[node name="Bee2" parent="enemy" instance=ExtResource( 15 )]
 position = Vector2( -1534.25, 173.087 )
 
-[node name="Bee3" parent="." instance=ExtResource( 15 )]
+[node name="Bee3" parent="enemy" instance=ExtResource( 15 )]
 position = Vector2( -1053.26, 1346.98 )
 
-[node name="Spider" parent="." instance=ExtResource( 23 )]
+[node name="Spider" parent="enemy" instance=ExtResource( 23 )]
 position = Vector2( -1766.34, 398.447 )
 
-[node name="Spider2" parent="." instance=ExtResource( 23 )]
+[node name="Spider2" parent="enemy" instance=ExtResource( 23 )]
 position = Vector2( -1571.25, 1061.07 )
 has_crystal = true
 
-[node name="Spider3" parent="." instance=ExtResource( 23 )]
+[node name="Spider3" parent="enemy" instance=ExtResource( 23 )]
 position = Vector2( -1379.53, 1639.61 )
 
-[node name="Crab" parent="." instance=ExtResource( 13 )]
+[node name="Crab" parent="enemy" instance=ExtResource( 13 )]
 position = Vector2( -2028.7, 909.712 )
 has_crystal = true
 
-[node name="Spider4" parent="." instance=ExtResource( 23 )]
+[node name="Spider4" parent="enemy" instance=ExtResource( 23 )]
 position = Vector2( -2442.42, 933.257 )
 has_crystal = true
 
-[node name="Ant5" parent="." instance=ExtResource( 14 )]
+[node name="Ant5" parent="enemy" instance=ExtResource( 14 )]
 position = Vector2( -2553.42, 388.356 )
 
-[node name="Ant6" parent="." instance=ExtResource( 14 )]
+[node name="Ant6" parent="enemy" instance=ExtResource( 14 )]
 position = Vector2( -2872.96, 953.439 )
 
-[node name="Ant7" parent="." instance=ExtResource( 14 )]
+[node name="Ant7" parent="enemy" instance=ExtResource( 14 )]
 position = Vector2( -2550.06, 1464.7 )
 
-[node name="Ant8" parent="." instance=ExtResource( 14 )]
+[node name="Ant8" parent="enemy" instance=ExtResource( 14 )]
 position = Vector2( -1921.07, 1858.24 )
 
-[node name="Bee4" parent="." instance=ExtResource( 15 )]
+[node name="Bee4" parent="enemy" instance=ExtResource( 15 )]
 position = Vector2( -1995.06, 647.353 )
 has_crystal = true
 
-[node name="Bee5" parent="." instance=ExtResource( 15 )]
+[node name="Bee5" parent="enemy" instance=ExtResource( 15 )]
 position = Vector2( -2092.61, 1188.89 )
 has_crystal = true
 
-[node name="Ant9" parent="." instance=ExtResource( 14 )]
+[node name="Ant9" parent="enemy" instance=ExtResource( 14 )]
 position = Vector2( -1934.52, 1484.89 )
 
-[node name="Bee6" parent="." instance=ExtResource( 15 )]
+[node name="Bee6" parent="enemy" instance=ExtResource( 15 )]
 position = Vector2( 2317.7, 178.391 )
 has_crystal = true
 
-[node name="Bee7" parent="." instance=ExtResource( 15 )]
+[node name="Bee7" parent="enemy" instance=ExtResource( 15 )]
 position = Vector2( 1268.11, -625.79 )
 
-[node name="Ant10" parent="." instance=ExtResource( 14 )]
+[node name="Ant10" parent="enemy" instance=ExtResource( 14 )]
 position = Vector2( 1030.81, 1629.07 )
 has_crystal = true
 
-[node name="Crab2" parent="." instance=ExtResource( 13 )]
+[node name="Crab2" parent="enemy" instance=ExtResource( 13 )]
 position = Vector2( 1716.8, 1488.31 )
 has_crystal = true
 
-[node name="Ant11" parent="." instance=ExtResource( 14 )]
+[node name="Ant11" parent="enemy" instance=ExtResource( 14 )]
 position = Vector2( -1982.06, -1441.55 )
 
-[node name="Spider5" parent="." instance=ExtResource( 23 )]
+[node name="Spider5" parent="enemy" instance=ExtResource( 23 )]
 position = Vector2( -754.004, -1719.2 )
 has_crystal = true
 
-[node name="Ant12" parent="." instance=ExtResource( 14 )]
+[node name="Ant12" parent="enemy" instance=ExtResource( 14 )]
 position = Vector2( -3413.01, -715.399 )
 
-[node name="Ant13" parent="." instance=ExtResource( 14 )]
+[node name="Ant13" parent="enemy" instance=ExtResource( 14 )]
 position = Vector2( 3891.24, 1644.6 )
 
-[node name="Bunny" parent="." instance=ExtResource( 17 )]
+[node name="Bunny" parent="enemy" instance=ExtResource( 17 )]
 position = Vector2( 1605.13, 446.033 )
 
-[node name="Bunny2" parent="." instance=ExtResource( 17 )]
+[node name="Bunny2" parent="enemy" instance=ExtResource( 17 )]
 position = Vector2( -1957.74, -633.767 )
 
-[node name="Bunny3" parent="." instance=ExtResource( 17 )]
+[node name="Bunny3" parent="enemy" instance=ExtResource( 17 )]
 position = Vector2( -549.713, 1987.25 )
 
-[node name="Bunny4" parent="." instance=ExtResource( 17 )]
+[node name="Bunny4" parent="enemy" instance=ExtResource( 17 )]
 position = Vector2( 3289.05, 707.658 )
 
-[node name="Bunny5" parent="." instance=ExtResource( 17 )]
+[node name="Bunny5" parent="enemy" instance=ExtResource( 17 )]
 position = Vector2( 3043.65, -1538.63 )
 
-[node name="Bunny6" parent="." instance=ExtResource( 17 )]
+[node name="Bunny6" parent="enemy" instance=ExtResource( 17 )]
 position = Vector2( 3790.36, -1023.85 )
 
-[node name="Bunny7" parent="." instance=ExtResource( 17 )]
+[node name="Bunny7" parent="enemy" instance=ExtResource( 17 )]
 position = Vector2( 3530.14, -1561.25 )
 
-[node name="Bunny8" parent="." instance=ExtResource( 17 )]
+[node name="Bunny8" parent="enemy" instance=ExtResource( 17 )]
 position = Vector2( 479.641, -509.077 )
+
+[node name="Item" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1676.45, 1736.51 )
+type = 5
+
+[node name="Item2" parent="." instance=ExtResource( 12 )]
+position = Vector2( -2008.79, 772.436 )
+type = 4
