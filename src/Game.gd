@@ -171,3 +171,5 @@ func _on_mute_toggled(button_pressed):
 		$MusicPlayer.stream_paused = true
 	else:
 		$MusicPlayer.stream_paused = false
+
+

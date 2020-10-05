@@ -64,10 +64,12 @@ func _integrate_forces(state):
 
 func land():
 	jumping = false
+	$AnimationPlayer.playback_speed = rand_range(0.2, 1)
 
 
 func jump():
 	jumping = true
 	jump_starting_pos = position
 	jump_target_offset =  Vector2(rand_range(-100,100), rand_range(-100, 100))
+	$AnimationPlayer.playback_speed = 1
 

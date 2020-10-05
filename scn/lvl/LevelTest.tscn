@@ -87,7 +87,7 @@ position = Vector2( 69.2976, -358.558 )
 position = Vector2( -678.098, -147.119 )
 
 [node name="Fire" parent="." instance=ExtResource( 16 )]
-position = Vector2( -493.058, -9.89429 )
+position = Vector2( -472.589, 0 )
 
 [node name="Bee" parent="." instance=ExtResource( 18 )]
 position = Vector2( 630.978, -194.948 )
