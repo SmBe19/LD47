@@ -101,7 +101,6 @@ func _process(delta):
 			match node.type:
 				Item.ItemType.Crystal:
 					indicators.push_back([node.global_position, preload("res://img/ui/crystalindicator.png")])
-					indicators.push_back(node.global_position)
 				Item.ItemType.HpBook, Item.ItemType.DmgBook:
 					indicators.push_back([node.global_position, preload("res://img/ui/bookindicator.png")])
 		if node is Portal:
