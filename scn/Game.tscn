@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scn/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Game.gd" type="Script" id=2]
@@ -8,11 +8,17 @@
 [ext_resource path="res://img/ui/heart.png" type="Texture" id=6]
 [ext_resource path="res://img/ui/spiral_color.png" type="Texture" id=7]
 [ext_resource path="res://img/ui/mute_on.png" type="Texture" id=8]
+[ext_resource path="res://src/CrystalIndicators.gd" type="Script" id=9]
+[ext_resource path="res://icon.png" type="Texture" id=10]
+[ext_resource path="res://img/item/book0002.png" type="Texture" id=11]
+[ext_resource path="res://img/item/book0000.png" type="Texture" id=12]
+[ext_resource path="res://img/item/book0003.png" type="Texture" id=13]
+[ext_resource path="res://img/item/book0001.png" type="Texture" id=14]
 [ext_resource path="res://img/ui/spiral_spiral.png" type="Texture" id=15]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 resource_name = "CaveEnter"
 length = 2.0
 tracks/0/type = "value"
@@ -28,7 +34,8 @@ tracks/0/keys = {
 "values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
+resource_name = "Transition"
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Transition:rect_rotation")
@@ -67,6 +74,17 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
+[sub_resource type="CanvasItemMaterial" id=4]
+blend_mode = 3
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ null, ExtResource( 12 ), ExtResource( 14 ), ExtResource( 11 ), ExtResource( 13 ), ExtResource( 13 ), ExtResource( 13 ) ],
+"loop": false,
+"name": "open",
+"speed": 3.0
+} ]
+
 [node name="Game" type="YSort"]
 script = ExtResource( 2 )
 
@@ -104,8 +122,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="UI"]
-anims/CaveEnter = SubResource( 2 )
-anims/Transition = SubResource( 3 )
+anims/CaveEnter = SubResource( 3 )
+anims/Transition = SubResource( 2 )
 
 [node name="HealthDisplay" type="Sprite" parent="UI"]
 position = Vector2( 1010.81, 69.0037 )
@@ -142,11 +160,12 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="UI/Transition"]
-margin_left = -512.0
+margin_left = -510.413
 margin_top = -512.0
-margin_right = 1536.0
+margin_right = 1537.59
 margin_bottom = 1536.0
 mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -161,15 +180,25 @@ __meta__ = {
 }
 
 [node name="spiral" type="TextureRect" parent="UI/Transition"]
-margin_left = 20.9986
-margin_top = 15.539
-margin_right = 1045.0
-margin_bottom = 1039.54
+margin_right = 1024.0
+margin_bottom = 1024.0
 mouse_filter = 2
 texture = ExtResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CrystalIndicators" type="Node2D" parent="UI"]
+material = SubResource( 4 )
+position = Vector2( 512, 300 )
+script = ExtResource( 9 )
+texture = ExtResource( 10 )
+
+[node name="BookAnim" type="AnimatedSprite" parent="UI"]
+position = Vector2( 512, 300 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 5 )
+animation = "open"
 
 [node name="Level" parent="." instance=ExtResource( 3 )]
 

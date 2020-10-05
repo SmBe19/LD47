@@ -79,6 +79,20 @@ func _process(delta):
 				self.remove_child(child)
 		restart()
 
+	var crystals = []
+	var stack = get_children()
+	while !stack.empty():
+		var node = stack.pop_back()
+		stack += node.get_children()
+		if node is Enemy:
+			if node.has_crystal:
+				crystals.push_back(node.global_position)
+		if node is Item:
+			if node.type == Item.ItemType.Crystal:
+				crystals.push_back(node.global_position)
+
+	$UI/CrystalIndicators.crystal_positions = crystals
+
 
 func load_level(level):
 	score += time

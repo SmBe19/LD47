@@ -12,11 +12,18 @@ func _ready():
 var reset_queued = false
 var death_queued = false
 
+var jumping = false
+var jump_starting_pos : Vector2 
+var jump_target_offset : Vector2 = Vector2.ZERO
+
 var on_fire = false
 
 func on_reset():
 	reset_queued = true
+	death_queued = false
 	on_fire = false
+	jumping = false
+	jump_target_offset = Vector2.ZERO
 	print("queued reset!")
 
 func hurt(hp):
@@ -32,7 +39,7 @@ func hurt(hp):
 		for player in players:
 			if player.position.distance_to(position) < closest.position.distance_to(position):
 				closest = player
-		closest.health += 1
+		closest.health += $"/root/Game".player_extra_hp + 3
 	else:
 		var meat = preload("res://scn/Item.tscn").instance()
 		meat.type = Item.ItemType.Meat
@@ -40,16 +47,27 @@ func hurt(hp):
 		get_parent().add_child(meat)
 	
 	death_queued = true
+	jumping = false
+	jump_target_offset = Vector2.ZERO
 
 func _integrate_forces(state):
 	if reset_queued:
-		print("executed reset!")
-		print(initial_position)
 		state.transform.origin = initial_position
+		jump_starting_pos = initial_position
 		reset_queued = false
 	if death_queued:
 		state.transform.origin = Vector2(NAN, NAN)
 		death_queued = false
+	if jumping:
+		# tween position
+		state.transform.origin = jump_starting_pos + min(1.0, $AnimationPlayer.current_animation_position) * jump_target_offset
 
-func _on_land():
-	pass
+func land():
+	jumping = false
+
+
+func jump():
+	jumping = true
+	jump_starting_pos = position
+	jump_target_offset =  Vector2(rand_range(-100,100), rand_range(-100, 100))
+

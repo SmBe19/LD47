@@ -73,6 +73,9 @@ func find_target():
 			if player.position.distance_to(position) < aggression_distance:
 				target = player
 				break
+	else:
+		if target.position.distance_to(position) > aggression_distance:
+			target = null
 
 func move(delta):
 	if target != null:

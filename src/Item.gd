@@ -53,7 +53,7 @@ func hurt(dmg):
 				for player in players:
 					if player.position.distance_to(position) < closest.position.distance_to(position):
 						closest = player
-				closest.health += 1
+				closest.health += $"/root/Game".player_extra_hp + 3
 				get_parent().remove_child(self)
 	match type:
 		ItemType.Wood:
@@ -69,7 +69,9 @@ func hurt(dmg):
 			get_parent().add_child(wood)
 			death_queued = true
 		ItemType.HpBook, ItemType.DmgBook:
-			$Sprite.playing = true
+			var bookanim = $"/root/Game/UI/BookAnim"
+			bookanim.play("open")
+			bookanim.connect("animation_finished", self, "_on_animation_finished", [bookanim])
 
 
 func _integrate_forces(state):
@@ -84,7 +86,7 @@ func _integrate_forces(state):
 
 
 
-func _on_animation_finished():
+func _on_animation_finished(bookanim):
 	match type:
 		ItemType.DmgBook:
 			$"/root/Game/Player".learn_dmg(1)
@@ -92,5 +94,8 @@ func _on_animation_finished():
 			$"/root/Game/Player".learn_hp(1)
 		_:
 			return
-	get_parent().remove_child(self)
+	bookanim.frame = 0
+	bookanim.playing = false
+	if get_parent():
+		get_parent().remove_child(self)
 	
