@@ -67,6 +67,8 @@ tracks/3/keys = {
 }
 
 [node name="Bunny" type="RigidBody2D"]
+mode = 2
+linear_damp = 100.0
 script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
